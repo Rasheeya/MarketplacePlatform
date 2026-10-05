@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Stackly - Customer & Seller Support Hub</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Core & Page Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link active">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn" data-open-wishlist title="View Wishlist">
+          <i class="far fa-heart"></i>
+          <span class="badge-count wishlist-count-badge">0</span>
+        </button>
+        <button class="nav-icon-btn" data-open-cart title="View Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge-count cart-count-badge">0</span>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+        <button class="hamburger-btn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img">
+      </a>
+      <button class="close-drawer-btn btn-icon"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Blog</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link active"><span>Contact</span> <i class="fas fa-chevron-right"></i></a>
+    </div>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Log In</a>
+    </div>
+  </div>
+
+  <!-- Page Hero Header -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-hero-grid">
+        <div class="page-hero-content" data-aos="fade-right">
+          <h1 class="page-hero-title">We are Here to <span class="highlight">Help You Succeed</span></h1>
+          <p class="page-hero-desc">Have questions regarding orders, escrow protection, seller onboarding, or enterprise procurement? Get in touch with our dedicated support team.</p>
+          
+          <div class="hero-trust-chips">
+            <div class="hero-trust-chip"><i class="fas fa-headset"></i> 24/7 Dedicated Concierge</div>
+            <div class="hero-trust-chip emerald"><i class="fas fa-clock"></i> &lt; 15 Min First Response</div>
+            <div class="hero-trust-chip gold"><i class="fas fa-shield-alt"></i> Priority Dispute Mediation</div>
+          </div>
+        </div>
+
+        <div class="page-hero-visual" data-aos="fade-left">
+          <div class="hero-glass-card">
+            <div class="hero-card-header">
+              <span class="hero-card-badge"><i class="fas fa-satellite-dish"></i> Support Live Status</span>
+              <div class="hero-pulse-dot" title="Live Online"></div>
+            </div>
+            <div class="hero-card-stats">
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-bolt" style="color: #38bdf8;"></i> Average Response</span>
+                <span class="hero-stat-value accent">9 Minutes</span>
+              </div>
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-smile" style="color: #34d399;"></i> Resolution Rate</span>
+                <span class="hero-stat-value emerald">99.2% Satisfied</span>
+              </div>
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-comments" style="color: #fbbf24;"></i> Live Channels</span>
+                <span class="hero-stat-value gold">Chat & Hotline</span>
+              </div>
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-globe-americas" style="color: #f43f5e;"></i> Language Support</span>
+                <span class="hero-stat-value">English, ES, DE, FR</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section A: Contact Information Cards -->
+  <section class="section-py" style="background: #ffffff;">
+    <div class="container">
+      <div class="contact-cards-grid" data-aos="fade-up">
+        <div class="contact-card-box">
+          <div class="contact-icon-circle"><i class="fas fa-phone-alt"></i></div>
+          <h4>Phone Support</h4>
+          <p>Direct assistance & inquiries</p>
+          <a href="tel:98001245736" class="contact-card-link">98001245736</a>
+        </div>
+
+        <div class="contact-card-box">
+          <div class="contact-icon-circle"><i class="fas fa-envelope"></i></div>
+          <h4>Official Email</h4>
+          <p>Customer & merchant support</p>
+          <a href="mailto:info@stackly.com" class="contact-card-link">info@stackly.com</a>
+        </div>
+
+        <div class="contact-card-box">
+          <div class="contact-icon-circle"><i class="fas fa-map-marker-alt"></i></div>
+          <h4>Headquarters</h4>
+          <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+          <a href="https://www.google.com/maps/place/Stackly/@11.6829566,78.1739798,17z/data=!3m1!4b1!4m6!3m5!1s0x3babefef7fd970bb:0xe11aef1a71994f9!8m2!3d11.6829566!4d78.1739798!16s%2Fg%2F11l660s35r" target="_blank" rel="noopener" class="contact-card-link"><i class="fas fa-directions"></i> View Map</a>
+        </div>
+
+        <div class="contact-card-box">
+          <div class="contact-icon-circle"><i class="fas fa-clock"></i></div>
+          <h4>Working Hours</h4>
+          <p>Support desk active</p>
+          <span style="font-weight: 700; color: var(--primary-navy); font-size: 0.95rem;">Mon - Sat: 9:00 AM - 7:00 PM</span>
+        </div>
+      </div>
+
+      <!-- Section B & C: Forms Side-by-Side -->
+      <div class="contact-forms-grid">
+        <!-- Section B: General Contact Form -->
+        <div class="form-wrapper-card" data-aos="fade-right">
+          <span class="section-badge"><i class="fas fa-paper-plane"></i> Direct Inquiry</span>
+          <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--primary-navy); margin: 0.5rem 0 1.25rem;">Send Us a Message</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Fill out this form and our support coordinators will route your message to the appropriate specialist.</p>
+
+          <form id="marketplace-contact-form" novalidate>
+            <div class="form-group-row">
+              <div class="form-field">
+                <label>Full Name *</label>
+                <input type="text" name="fullname" placeholder="e.g. John Doe" required>
+              </div>
+              <div class="form-field">
+                <label>Email Address *</label>
+                <input type="email" name="email" placeholder="john@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-field">
+                <label>Phone Number *</label>
+                <input type="tel" name="phone" placeholder="e.g. +1 (555) 012-4573" required>
+              </div>
+              <div class="form-field">
+                <label>I Am A: *</label>
+                <select name="usertype" required>
+                  <option value="" selected disabled>-- Select user role --</option>
+                  <option value="Buyer">Discerning Shopper / Buyer</option>
+                  <option value="Seller">Merchant / Brand Seller</option>
+                  <option value="Business Partner">B2B Client / Enterprise Partner</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label>Subject *</label>
+              <input type="text" name="subject" placeholder="What is this inquiry regarding?" required>
+            </div>
+
+            <div class="form-field">
+              <label>Your Message *</label>
+              <textarea name="message" rows="4" placeholder="Provide details regarding your question or order..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Section C: Specialized Seller Support Request -->
+        <div class="form-wrapper-card" style="background: #f8fafc;" data-aos="fade-left">
+          <span class="section-badge gold"><i class="fas fa-tools"></i> Merchant Helpdesk</span>
+          <h3 style="font-size: 1.6rem; font-weight: 800; color: var(--primary-navy); margin: 0.5rem 0 1.25rem;">Seller Support Ticket</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Fast-track priority ticketing for registered merchants and verified brands.</p>
+
+          <form id="seller-support-form" novalidate>
+            <div class="form-field">
+              <label>Store / Brand Name *</label>
+              <input type="text" placeholder="e.g. Stackly Sound & Tech" required>
+            </div>
+
+            <div class="form-field">
+              <label>Support Category *</label>
+              <select required>
+                <option value="" selected disabled>-- Select support category --</option>
+                <option value="listing">Product Listing & CSV Import</option>
+                <option value="verification">Seller KYC & Verification</option>
+                <option value="payouts">Escrow & Payout Discrepancy</option>
+                <option value="disputes">Order Dispute Mediation</option>
+                <option value="campaigns">Advertising & Sponsored Ads</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label>Merchant Registered Email *</label>
+              <input type="email" placeholder="merchant@brand.com" required>
+            </div>
+
+            <div class="form-field">
+              <label>Issue Description *</label>
+              <textarea rows="3" placeholder="Describe the technical or listing problem..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-dark" style="width: 100%;">
+              <i class="fas fa-ticket-alt"></i> Create Priority Ticket
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Google Maps Section -->
+  <section class="section-py-sm" style="background: #ffffff; padding-top: 0;">
+    <div class="container" data-aos="fade-up">
+      <div class="section-header text-start" style="margin-bottom: 2rem;">
+        <span class="section-badge"><i class="fas fa-map-marked-alt"></i> Location & Office</span>
+        <h2 class="section-title">Visit Our <span class="highlight">Corporate Office</span></h2>
+        <p class="section-subtitle">Located in Salem, Tamil Nadu. Find us easily with real-time navigation.</p>
+      </div>
+
+      <div class="map-section-wrapper">
+        <iframe 
+          src="https://maps.google.com/maps?q=11.6829566,78.1739798&hl=en&z=17&output=embed" 
+          width="100%" 
+          height="450" 
+          style="border:0; width: 100%; display: block;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Stackly Corporate Location Map">
+        </iframe>
+        <div class="map-card-overlay">
+          <h4><i class="fas fa-building" style="color: var(--accent-blue);"></i> Stackly HQ</h4>
+          <p>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+          <div class="map-card-details">
+            <a href="tel:98001245736"><i class="fas fa-phone-alt"></i> <span>98001245736</span></a>
+            <a href="mailto:info@stackly.com"><i class="fas fa-envelope"></i> <span>info@stackly.com</span></a>
+            <div><i class="fas fa-clock"></i> <span>Mon - Sat: 9:00 AM - 7:00 PM</span></div>
+          </div>
+          <a href="https://www.google.com/maps/place/Stackly/@11.6829566,78.1739798,17z/data=!3m1!4b1!4m6!3m5!1s0x3babefef7fd970bb:0xe11aef1a71994f9!8m2!3d11.6829566!4d78.1739798!16s%2Fg%2F11l660s35r" target="_blank" rel="noopener" class="btn btn-primary btn-sm" style="width: 100%;">
+            <i class="fas fa-directions"></i> Get Directions on Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section D: Frequently Asked Questions (Accordion) -->
+  <section class="section-py" style="background: #f8fafc;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge emerald">Quick Answers</span>
+        <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+        <p class="section-subtitle">Find immediate answers to common questions about orders, escrow safety, returns, and seller operations.</p>
+      </div>
+
+      <div class="faq-accordion-container" data-aos="fade-up">
+        <!-- FAQ 1 -->
+        <div class="faq-item active">
+          <div class="faq-question">
+            <span>How does the Stackly Escrow Protection work for buyers?</span>
+            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+          </div>
+          <div class="faq-answer">
+            When you complete an order, your payment is securely deposited into our audited escrow vault. The vendor receives a fulfillment notice to pack and dispatch your order. The funds are only released to the seller after the courier confirms delivery and your 14-day inspection period elapses without dispute.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What are the requirements to become a verified seller?</span>
+            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+          </div>
+          <div class="faq-answer">
+            Sellers must provide registered business licenses, tax identification numbers, verified identity credentials (KYC), and undergo a quality sample check. We maintain a zero-tolerance policy against counterfeit or replica items.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How does product comparison work on the website?</span>
+            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+          </div>
+          <div class="faq-answer">
+            Simply click the exchange/compare icon on any product card across the catalog. You can add up to 3 items at a time. The bottom floating comparison bar will display an interactive modal comparing technical specs, warranty terms, and seller ratings side-by-side.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is the return and refund policy?</span>
+            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+          </div>
+          <div class="faq-answer">
+            We provide an unconditional 14-day return window on eligible items. If an item arrives damaged, defective, or misdescribed, you can initiate a return directly from your User Dashboard with a pre-paid courier label. Instant refunds are processed upon item scan.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can corporate clients make bulk purchases with tax invoices?</span>
+            <i class="fas fa-chevron-down faq-icon-arrow"></i>
+          </div>
+          <div class="faq-answer">
+            Yes! Corporate buyers can register for a Client Account. The Client Dashboard provides access to volume discount tiers, automated tax invoicing, multi-user procurement approval flows, and customized escrow wire transfers.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section E: Final Marketplace CTA -->
+  <section class="section-py" style="background: var(--grad-primary); color: #ffffff;">
+    <div class="container" style="text-align: center;" data-aos="zoom-in">
+      <span class="section-badge gold">Start Today</span>
+      <h2 style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0;">Ready to Discover Something New?</h2>
+      <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem;">Explore thousands of verified products from top global sellers with 100% escrow buyer protection.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="index.html#featured-products" class="btn btn-accent btn-lg"><i class="fas fa-shopping-bag"></i> Start Shopping</a>
+        <a href="index.html" class="btn btn-secondary btn-lg"><i class="fas fa-th-large"></i> Explore Categories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo footer-logo">
+            <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img">
+          </a>
+          <p>The next-generation marketplace platform connecting discerning buyers with verified global brands, independent makers, and premier suppliers.</p>
+          <div class="footer-social-links">
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-twitter"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Marketplace</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shopping</h4>
+          <div class="footer-links">
+            <a href="index.html#featured-products">Featured Products</a>
+            <a href="index.html">Today's Deals</a>
+            <a href="index.html#trending-products-grid">Trending Items</a>
+            <a href="services.html">Buyer Protection</a>
+            <a href="client-dashboard.html">B2B Procurement</a>
+          </div>
+        </div>
+
+
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@stackly.com" style="color: var(--text-light);">info@stackly.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:98001245736" style="color: var(--text-light);">98001245736</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+          </div>
+        </div>
+
+        <div class="footer-col footer-map-col">
+          <h4>Our Location</h4>
+          <div class="footer-map-container">
+            <iframe 
+              src="https://maps.google.com/maps?q=11.6829566,78.1739798&hl=en&z=15&output=embed" 
+              title="Stackly Location Map"
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="https://www.google.com/maps/place/Stackly/@11.6829566,78.1739798,17z/data=!3m1!4b1!4m6!3m5!1s0x3babefef7fd970bb:0xe11aef1a71994f9!8m2!3d11.6829566!4d78.1739798!16s%2Fg%2F11l660s35r" target="_blank" rel="noopener" class="footer-map-btn">
+              <i class="fas fa-directions"></i> Open in Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stackly Platform Inc. All rights reserved.</div>
+        <div class="payment-badges">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-apple-pay"></i>
+          <i class="fab fa-cc-paypal"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal Container -->
+  <div id="quick-view-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="close-quick-modal"><i class="fas fa-times"></i></button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer" class="side-drawer">
+    <div class="drawer-header">
+      <h3><i class="fas fa-shopping-bag" style="color: var(--accent-blue);"></i> Shopping Cart</h3>
+      <button class="btn-icon" id="close-cart-drawer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-content" id="cart-drawer-items"></div>
+    <div class="drawer-footer">
+      <div class="drawer-subtotal">
+        <span>Subtotal:</span>
+        <span id="cart-drawer-subtotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="openCheckoutModal()">
+        <i class="fas fa-lock"></i> Proceed to Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer -->
+  <div id="wishlist-drawer" class="side-drawer">
+    <div class="drawer-header">
+      <h3><i class="fas fa-heart" style="color: var(--accent-rose);"></i> Saved Wishlist</h3>
+      <button class="btn-icon" id="close-wishlist-drawer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-content" id="wishlist-drawer-items"></div>
+  </div>
+
+  <div class="drawer-backdrop"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

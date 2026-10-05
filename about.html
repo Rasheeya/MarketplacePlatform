@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Stackly - Our Story, Mission & Ecosystem</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Core & Page Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link active">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn" data-open-wishlist title="View Wishlist">
+          <i class="far fa-heart"></i>
+          <span class="badge-count wishlist-count-badge">0</span>
+        </button>
+        <button class="nav-icon-btn" data-open-cart title="View Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge-count cart-count-badge">0</span>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+        <button class="hamburger-btn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img">
+      </a>
+      <button class="close-drawer-btn btn-icon"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="about.html" class="mobile-nav-link active"><span>About</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link"><span>Blog</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span> <i class="fas fa-chevron-right"></i></a>
+    </div>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Log In</a>
+    </div>
+  </div>
+
+  <!-- Page Hero Header -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-hero-grid">
+        <div class="page-hero-content" data-aos="fade-right">
+          <h1 class="page-hero-title">Shaping the Future of <span class="highlight">Multi-Vendor Commerce</span></h1>
+          <p class="page-hero-desc">Connecting over 100,000 discerning shoppers with 5,000+ verified global brands and independent craftspeople under a unified, trusted standard.</p>
+          
+          <div class="hero-trust-chips">
+            <div class="hero-trust-chip"><i class="fas fa-shield-alt"></i> 100% Escrow Protected</div>
+            <div class="hero-trust-chip emerald"><i class="fas fa-check-circle"></i> Verified Merchant Network</div>
+            <div class="hero-trust-chip gold"><i class="fas fa-globe"></i> Global Fulfillment</div>
+          </div>
+        </div>
+
+        <div class="page-hero-visual" data-aos="fade-left">
+          <div class="hero-glass-card">
+            <div class="hero-card-header">
+              <span class="hero-card-badge"><i class="fas fa-chart-line"></i> Live Platform Metrics</span>
+              <div class="hero-pulse-dot" title="Live Synced"></div>
+            </div>
+            <div class="hero-card-stats">
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-users" style="color: #38bdf8;"></i> Active Members</span>
+                <span class="hero-stat-value accent">100K+</span>
+              </div>
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-store" style="color: #34d399;"></i> Verified Brands</span>
+                <span class="hero-stat-value emerald">5,200+</span>
+              </div>
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-boxes" style="color: #fbbf24;"></i> Curated Catalog</span>
+                <span class="hero-stat-value gold">25,000+</span>
+              </div>
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-star" style="color: #f43f5e;"></i> Customer Rating</span>
+                <span class="hero-stat-value">4.9 / 5.0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section A: Our Marketplace Story -->
+  <section class="section-py" style="background: #ffffff;">
+    <div class="container">
+      <div class="story-grid">
+        <div data-aos="fade-right">
+          <span class="section-badge">Our Origin & Vision</span>
+          <h2 class="section-title">Built on Trust, Velocity, and <span class="highlight">Uncompromising Quality</span></h2>
+          <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.25rem;">
+            Stackly was founded with a bold ambition: to bridge the gap between discerning global consumers and authentic manufacturers. Traditional e-commerce often burdens buyers with inconsistent quality and leaves sellers stranded without reliable tooling.
+          </p>
+          <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 1.75rem;">
+            We created an end-to-end ecosystem where every vendor is physically authenticated, every financial transaction is safeguarded by escrow, and modern software makes multi-vendor discovery effortless.
+          </p>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;">
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--primary-navy); margin-bottom: 0.35rem;"><i class="fas fa-check-circle" style="color: var(--accent-blue);"></i> Customer-First</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Transparent pricing, instant returns, and real human support.</p>
+            </div>
+            <div>
+              <h4 style="font-size: 1.1rem; color: var(--primary-navy); margin-bottom: 0.35rem;"><i class="fas fa-check-circle" style="color: var(--accent-blue);"></i> Seller Empowerment</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted);">Enterprise analytics, zero lock-in, and rapid payout schedules.</p>
+            </div>
+          </div>
+
+          <a href="services.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Explore Our Services</a>
+        </div>
+
+        <div class="story-media-box" data-aos="fade-left">
+          <img src="assets/about-team.webp" alt="Marketplace Team" class="story-main-img">
+          <div class="story-badge-card">
+            <div class="icon-wrap"><i class="fas fa-award"></i></div>
+            <div>
+              <div style="font-size: 1.35rem; font-weight: 800; color: var(--primary-navy);">Top Rated 2026</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);">Global Commerce Award</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section B: Our Mission & Core Values -->
+  <section class="section-py" style="background: #f8fafc;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge gold">Guiding Principles</span>
+        <h2 class="section-title">Our Mission & <span class="highlight">Core Values</span></h2>
+        <p class="section-subtitle">We measure our success by the prosperity of our merchant community and the satisfaction of our global buyers.</p>
+      </div>
+
+      <div class="mission-grid">
+        <div class="mission-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="mission-icon"><i class="fas fa-handshake"></i></div>
+          <h3>Connecting Markets</h3>
+          <p>Eliminating geographical barriers between talented artisans, specialized brands, and consumers seeking authentic goods.</p>
+        </div>
+
+        <div class="mission-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="mission-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Trusted Commerce</h3>
+          <p>Pioneering 100% verified identities, cryptographic escrow, and authentic customer-verified reviews for total confidence.</p>
+        </div>
+
+        <div class="mission-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="mission-icon"><i class="fas fa-search-plus"></i></div>
+          <h3>Simplified Discovery</h3>
+          <p>Utilizing high-speed search, AI-guided recommendations, and intelligent side-by-side comparison matrices.</p>
+        </div>
+
+        <div class="mission-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="mission-icon"><i class="fas fa-chart-line"></i></div>
+          <h3>Supporting Growth</h3>
+          <p>Providing independent sellers with enterprise-grade logistics, warehousing support, and marketing acceleration.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section C: Marketplace Ecosystem -->
+  <section class="section-py" style="background: #ffffff;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge emerald">Platform Synergies</span>
+        <h2 class="section-title">The Stackly <span class="highlight">Ecosystem</span></h2>
+        <p class="section-subtitle">A balanced, high-efficiency marketplace tailored for every participant in modern digital commerce.</p>
+      </div>
+
+      <div class="ecosystem-grid">
+        <!-- For Buyers -->
+        <div class="ecosystem-card active-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="ecosystem-header">
+            <div class="ecosystem-icon"><i class="fas fa-user-check"></i></div>
+            <div>
+              <span style="font-size: 0.8rem; color: var(--accent-blue); font-weight: 700; text-transform: uppercase;">For Consumers</span>
+              <h3>Discerning Buyers</h3>
+            </div>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Curated catalog discovery, price matching, escrow-backed order guarantee, and unified multi-vendor checkout.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> 1-Click Multi-Merchant Checkout</li>
+            <li><i class="fas fa-check"></i> Integrated Escrow Protection</li>
+            <li><i class="fas fa-check"></i> 14-Day Free Returns</li>
+          </ul>
+        </div>
+
+        <!-- For Sellers -->
+        <div class="ecosystem-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="ecosystem-header">
+            <div class="ecosystem-icon"><i class="fas fa-store"></i></div>
+            <div>
+              <span style="font-size: 0.8rem; color: var(--accent-blue); font-weight: 700; text-transform: uppercase;">For Merchants</span>
+              <h3>Direct Sellers</h3>
+            </div>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Global storefronts, automated shipping label generation, unified inventory sync, and bi-weekly payouts.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Real-time Analytics Dashboard</li>
+            <li><i class="fas fa-check"></i> Low Commission Structure</li>
+            <li><i class="fas fa-check"></i> Automated Tax & Invoicing</li>
+          </ul>
+        </div>
+
+        <!-- For Brands -->
+        <div class="ecosystem-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="ecosystem-header">
+            <div class="ecosystem-icon"><i class="fas fa-building"></i></div>
+            <div>
+              <span style="font-size: 0.8rem; color: var(--accent-blue); font-weight: 700; text-transform: uppercase;">For Enterprises</span>
+              <h3>Global Brands</h3>
+            </div>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Dedicated branded landing hubs, sponsored search visibility, and counterfeit protection monitoring.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Brand Registry Protection</li>
+            <li><i class="fas fa-check"></i> Sponsored Campaign Tools</li>
+            <li><i class="fas fa-check"></i> Dedicated Account Executive</li>
+          </ul>
+        </div>
+
+        <!-- For Logistics Partners -->
+        <div class="ecosystem-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="ecosystem-header">
+            <div class="ecosystem-icon"><i class="fas fa-truck-loading"></i></div>
+            <div>
+              <span style="font-size: 0.8rem; color: var(--accent-blue); font-weight: 700; text-transform: uppercase;">For Logistics</span>
+              <h3>Service Providers</h3>
+            </div>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">Deep API integrations for carriers, inspection labs, insurance underwriters, and fulfillment centers.</p>
+          <ul>
+            <li><i class="fas fa-check"></i> Real-time Telemetry Webhooks</li>
+            <li><i class="fas fa-check"></i> Automated Customs Clearance</li>
+            <li><i class="fas fa-check"></i> Warehousing Sync Hub</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section D: Marketplace Statistics -->
+  <section class="section-py-sm" style="background: #f8fafc;">
+    <div class="container">
+      <div class="stats-section" data-aos="zoom-in">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number" data-target="100000" data-suffix="+">0</div>
+            <div class="stat-label">Registered Users</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="5200" data-suffix="+">0</div>
+            <div class="stat-label">Active Verified Sellers</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="25000" data-suffix="+">0</div>
+            <div class="stat-label">Products Listed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number" data-target="50000" data-suffix="+">0</div>
+            <div class="stat-label">Successful Orders</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section E: Trust & Safety -->
+  <section class="section-py" style="background: #ffffff;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge">Zero Compromise</span>
+        <h2 class="section-title">Trust, Safety & <span class="highlight">Buyer Protection</span></h2>
+        <p class="section-subtitle">Multi-layered security protocols engineered into every step of the transaction lifecycle.</p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="trust-icon-box"><i class="fas fa-id-card"></i></div>
+          <h4>Seller Verification</h4>
+          <p>KYC checks, business registration audit, and manufacturing facility compliance certification.</p>
+        </div>
+
+        <div class="trust-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="trust-icon-box"><i class="fas fa-lock"></i></div>
+          <h4>Secure Payments</h4>
+          <p>Bank-grade 256-bit encryption with PCI-DSS Level 1 compliant gateway processing.</p>
+        </div>
+
+        <div class="trust-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="trust-icon-box"><i class="fas fa-shield-alt"></i></div>
+          <h4>Buyer Escrow</h4>
+          <p>Funds released to sellers only after buyer delivery confirmation and satisfaction check.</p>
+        </div>
+
+        <div class="trust-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="trust-icon-box"><i class="fas fa-star-half-alt"></i></div>
+          <h4>Authentic Reviews</h4>
+          <p>Zero fake reviews. Only verified purchase orders are permitted to submit evaluations.</p>
+        </div>
+
+        <div class="trust-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="trust-icon-box"><i class="fas fa-headset"></i></div>
+          <h4>Rapid Resolution</h4>
+          <p>Dedicated dispute officers resolving any delivery or item discrepancies within 24 hours.</p>
+        </div>
+
+        <div class="trust-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="trust-icon-box"><i class="fas fa-certificate"></i></div>
+          <h4>Guaranteed Authenticity</h4>
+          <p>100% genuine merchandise backed by strict counterfeit penalties and lab sample checks.</p>
+        </div>
+
+        <div class="trust-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="trust-icon-box"><i class="fas fa-truck-moving"></i></div>
+          <h4>Insured Transit</h4>
+          <p>Complimentary freight insurance and end-to-end GPS milestone telemetry for every order.</p>
+        </div>
+
+        <div class="trust-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="trust-icon-box"><i class="fas fa-user-shield"></i></div>
+          <h4>Privacy First</h4>
+          <p>Full GDPR & SOC2 compliance with zero commercial monetization of customer identity data.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section F: Our Journey & Milestones -->
+  <section class="section-py" style="background: #f8fafc;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge gold">Our Growth</span>
+        <h2 class="section-title">The Evolution of <span class="highlight">Stackly</span></h2>
+        <p class="section-subtitle">From a boutique platform idea to a premier multi-category global marketplace.</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2021</span>
+            <h4 class="timeline-title">Marketplace Founded</h4>
+            <p class="timeline-desc">Launched with an initial cohort of 50 verified artisanal makers and a commitment to transparent commerce.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2022</span>
+            <h4 class="timeline-title">First 1,000 Sellers Joined</h4>
+            <p class="timeline-desc">Expanded across electronics, fashion, and living decor with introduction of automated escrow protection.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2023</span>
+            <h4 class="timeline-title">Multi-Category Expansion</h4>
+            <p class="timeline-desc">Introduced B2B procurement client dashboards, bulk order processing, and express freight tracking.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024</span>
+            <h4 class="timeline-title">100K Active Customers</h4>
+            <p class="timeline-desc">Surpassed 50,000 fulfilled orders with 99.4% positive buyer satisfaction ratings across 28 countries.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2026</span>
+            <h4 class="timeline-title">Next-Gen Marketplace Innovation</h4>
+            <p class="timeline-desc">AI-powered personalized discovery, live side-by-side product comparison, and zero-fee seller growth programs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="section-py" style="background: var(--grad-primary); color: #ffffff;">
+    <div class="container" style="text-align: center;" data-aos="zoom-in">
+      <span class="section-badge gold">Join the Community</span>
+      <h2 style="font-size: 2.5rem; font-weight: 800; margin: 1rem 0;">Ready to Experience Modern Marketplace Commerce?</h2>
+      <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 2rem; font-size: 1.1rem;">Whether you are looking for premium curated products or seeking a high-velocity channel to sell your goods, Stackly is built for you.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="404.html" class="btn btn-accent btn-lg"><i class="fas fa-shopping-bag"></i> Start Shopping</a>
+        <a href="404.html" class="btn btn-secondary btn-lg"><i class="fas fa-store"></i> Register as Seller</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo footer-logo">
+            <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img">
+          </a>
+          <p>The next-generation marketplace platform connecting discerning buyers with verified global brands, independent makers, and premier suppliers.</p>
+          <div class="footer-social-links">
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-twitter"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Marketplace</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shopping</h4>
+          <div class="footer-links">
+            <a href="index.html#featured-products">Featured Products</a>
+            <a href="index.html">Today's Deals</a>
+            <a href="index.html#trending-products-grid">Trending Items</a>
+            <a href="services.html">Buyer Protection</a>
+            <a href="client-dashboard.html">B2B Procurement</a>
+          </div>
+        </div>
+
+
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@stackly.com" style="color: var(--text-light);">info@stackly.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:98001245736" style="color: var(--text-light);">98001245736</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+          </div>
+        </div>
+
+        <div class="footer-col footer-map-col">
+          <h4>Our Location</h4>
+          <div class="footer-map-container">
+            <iframe 
+              src="https://maps.google.com/maps?q=11.6829566,78.1739798&hl=en&z=15&output=embed" 
+              title="Stackly Location Map"
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="https://www.google.com/maps/place/Stackly/@11.6829566,78.1739798,17z/data=!3m1!4b1!4m6!3m5!1s0x3babefef7fd970bb:0xe11aef1a71994f9!8m2!3d11.6829566!4d78.1739798!16s%2Fg%2F11l660s35r" target="_blank" rel="noopener" class="footer-map-btn">
+              <i class="fas fa-directions"></i> Open in Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stackly Platform Inc. All rights reserved.</div>
+        <div class="payment-badges">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-apple-pay"></i>
+          <i class="fab fa-cc-paypal"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal Container -->
+  <div id="quick-view-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="close-quick-modal"><i class="fas fa-times"></i></button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer" class="side-drawer">
+    <div class="drawer-header">
+      <h3><i class="fas fa-shopping-bag" style="color: var(--accent-blue);"></i> Shopping Cart</h3>
+      <button class="btn-icon" id="close-cart-drawer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-content" id="cart-drawer-items"></div>
+    <div class="drawer-footer">
+      <div class="drawer-subtotal">
+        <span>Subtotal:</span>
+        <span id="cart-drawer-subtotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="openCheckoutModal()">
+        <i class="fas fa-lock"></i> Proceed to Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer -->
+  <div id="wishlist-drawer" class="side-drawer">
+    <div class="drawer-header">
+      <h3><i class="fas fa-heart" style="color: var(--accent-rose);"></i> Saved Wishlist</h3>
+      <button class="btn-icon" id="close-wishlist-drawer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-content" id="wishlist-drawer-items"></div>
+  </div>
+
+  <div class="drawer-backdrop"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

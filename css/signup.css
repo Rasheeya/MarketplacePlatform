@@ -1,0 +1,234 @@
+/* ==========================================================================
+   MARKETPLACE PLATFORM - SIGNUP PAGE STYLES (signup.css)
+   ========================================================================== */
+
+.signup-page-wrapper {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: radial-gradient(circle at 90% 10%, rgba(37, 99, 235, 0.08) 0%, rgba(248, 250, 252, 1) 90%);
+}
+
+.signup-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 1.25rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+}
+
+.signup-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  background: #ffffff;
+  color: var(--primary-navy);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.signup-back-btn:hover {
+  background: var(--bg-light-surface);
+  color: var(--accent-blue);
+  border-color: var(--accent-blue);
+  transform: translateX(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.signup-container-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  max-width: 840px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--card-border);
+  box-shadow: 0 15px 35px -5px rgba(15, 23, 42, 0.12);
+  overflow: hidden;
+}
+
+.signup-form-side {
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.signup-type-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.signup-type-card {
+  border: 1.5px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 0.55rem 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: #f8fafc;
+}
+
+.signup-type-card:hover {
+  border-color: var(--card-border-hover);
+}
+
+.signup-type-card.selected {
+  border-color: var(--accent-blue);
+  background: var(--accent-blue-subtle);
+}
+
+.signup-type-card i {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+  display: block;
+}
+
+.signup-type-card.selected i {
+  color: var(--accent-blue);
+}
+
+.signup-type-card .type-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+}
+
+.signup-type-card .type-desc {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Side Info Panel */
+.signup-info-side {
+  background: var(--grad-primary);
+  color: #ffffff;
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+
+.signup-info-side::before {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: -80px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.25) 0%, transparent 70%);
+}
+
+.security-seal {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.security-seal i {
+  font-size: 1.25rem;
+  color: var(--accent-emerald);
+}
+
+.security-seal-text {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  line-height: 1.35;
+}
+
+.signup-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.65rem;
+}
+
+@media (max-width: 850px) {
+  .signup-container-grid {
+    grid-template-columns: 1fr;
+    max-width: 460px;
+    width: 100%;
+  }
+  .signup-info-side {
+    display: none;
+  }
+  .signup-form-side {
+    padding: 1.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .signup-topbar {
+    padding: 1rem 1.25rem;
+  }
+  .signup-page-wrapper {
+    padding: 4.5rem 1rem 1.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .signup-form-row {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+  .signup-form-side {
+    padding: 1.5rem 1.15rem;
+  }
+  .signup-topbar {
+    padding: 0.75rem 1rem;
+  }
+  .signup-back-btn {
+    padding: 0.35rem 0.85rem;
+    font-size: 0.78rem;
+  }
+  .signup-type-card {
+    padding: 0.45rem 0.35rem;
+  }
+  .signup-type-card .type-title {
+    font-size: 0.78rem;
+  }
+  .signup-type-card .type-desc {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .signup-page-wrapper {
+    padding: 4rem 0.6rem 1rem 0.6rem;
+  }
+  .signup-form-side {
+    padding: 1.25rem 0.85rem;
+  }
+  .signup-type-selector {
+    gap: 0.5rem;
+  }
+  .signup-topbar .brand-logo-img {
+    max-width: 95px;
+    height: 25px;
+  }
+}
+

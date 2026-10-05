@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client & B2B Dashboard - Stackly</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core & Dashboard Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/user-dashboard.css">
+  <link rel="stylesheet" href="css/client-dashboard.css">
+</head>
+<body>
+
+  <div class="client-dashboard-layout">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="dashboard-sidebar client-sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img">
+        </a>
+        <button class="btn-icon sidebar-close-btn" id="sidebar-close-btn" aria-label="Close Navigation" style="color: #ffffff;"><i class="fas fa-times"></i></button>
+      </div>
+
+      <div class="sidebar-nav-container">
+        <div class="nav-section-label">Enterprise B2B</div>
+        <a href="javascript:void(0)" class="dashboard-nav-item active" data-target="view-client-overview">
+          <i class="fas fa-chart-line"></i> <span>Overview</span>
+        </a>
+        <a href="javascript:void(0)" class="dashboard-nav-item" data-target="view-client-orders">
+          <i class="fas fa-boxes"></i> <span>My Orders</span>
+        </a>
+        <a href="javascript:void(0)" class="dashboard-nav-item" data-target="view-client-purchases">
+          <i class="fas fa-shopping-basket"></i> <span>Purchases</span>
+        </a>
+
+        <div class="nav-section-label">Organization Profile</div>
+        <a href="javascript:void(0)" class="dashboard-nav-item" data-target="view-client-profile">
+          <i class="fas fa-building"></i> <span>Profile</span>
+        </a>
+        <a href="javascript:void(0)" class="dashboard-nav-item" data-target="view-client-support">
+          <i class="fas fa-headset"></i> <span>Support</span>
+        </a>
+        <a href="javascript:void(0)" class="dashboard-nav-item" data-target="view-client-settings">
+          <i class="fas fa-cog"></i> <span>Settings</span>
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        <a href="login.html" class="dashboard-nav-item logout-nav-item">
+          <i class="fas fa-sign-out-alt"></i> <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="client-main">
+      
+      <!-- Topbar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-left">
+          <button id="sidebar-toggle-btn" class="btn-icon sidebar-toggle-btn" aria-label="Toggle Navigation"><i class="fas fa-bars"></i></button>
+          <div class="topbar-title-wrap">
+            <h2 class="topbar-heading">Corporate Client Portal</h2>
+            <p class="topbar-subheading">B2B Bulk Procurement, Escrow Accounts, & Supplier Comparisons.</p>
+          </div>
+        </div>
+
+        <!-- Center Brand Logo in Mobile View -->
+        <a href="index.html" class="topbar-mobile-logo">
+          <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img">
+        </a>
+
+        <div class="topbar-right">
+          <button class="nav-icon-btn topbar-wish-btn" data-open-wishlist title="Notifications / Wishlist">
+            <i class="fas fa-bell"></i>
+            <span class="badge-count wishlist-count-badge">2</span>
+          </button>
+          
+          <button class="nav-icon-btn topbar-cart-btn" data-open-cart title="Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="badge-count cart-count-badge">0</span>
+          </button>
+
+          <div class="topbar-divider"></div>
+
+          <div class="user-mini-profile topbar-profile" onclick="window.location.href='404.html'">
+            <img src="assets/avatar-enterprise.webp" alt="Stackly Global Ent." class="user-avatar-sm" id="topbar-avatar-img">
+            <div class="user-profile-info">
+              <div class="profile-name">Stackly Global Ent.</div>
+              <div class="profile-badge"><i class="fas fa-briefcase"></i> <span class="profile-email-display">procurement@stacklycorp.com</span></div>
+            </div>
+          </div>
+
+          <!-- Mobile Profile Avatar Icon -->
+          <a href="404.html" class="nav-icon-btn topbar-mobile-profile" title="Profile">
+            <i class="far fa-user"></i>
+          </a>
+        </div>
+      </header>
+
+      <!-- Client Body Content -->
+      <main class="dashboard-body-content">
+        
+        <!-- VIEW 1: CLIENT OVERVIEW -->
+        <section id="view-client-overview" class="dashboard-view-section active-view">
+          
+          <!-- Welcome Hero Banner Card (Corporate Client Portal) -->
+          <div class="dash-welcome-card">
+            <div class="dash-welcome-badge">
+              <i class="fas fa-shield-alt"></i> CORPORATE CLIENT PORTAL
+            </div>
+            <h2 class="dash-welcome-title">Welcome Back, <span class="highlight-name">Stackly Global Ent.</span></h2>
+            <p class="dash-welcome-subtitle">Your Next Scheduled Cargo Delivery: <strong>Tomorrow at 7:00 AM</strong></p>
+            <div class="dash-welcome-cta">
+              <a href="404.html" class="btn btn-primary dash-welcome-btn">
+                <i class="fas fa-boxes"></i> Browse Bulk Catalog
+              </a>
+            </div>
+          </div>
+
+          <!-- Section A: Client Overview Cards -->
+          <div class="dashboard-stats-grid">
+            <div class="dash-stat-card">
+              <div class="stat-icon-wrap emerald"><i class="fas fa-truck-loading"></i></div>
+              <div class="stat-info">
+                <div class="stat-value">1 Active</div>
+                <div class="stat-title">Current Freight Delivery</div>
+                <div class="stat-meta-pill emerald"><i class="fas fa-check-circle"></i> On Schedule</div>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="stat-icon-wrap blue"><i class="fas fa-cubes"></i></div>
+              <div class="stat-info">
+                <div class="stat-value">184</div>
+                <div class="stat-title">Total Procured Units</div>
+                <div class="stat-meta-pill emerald"><i class="fas fa-star"></i> 100% On-Time</div>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="stat-icon-wrap rose"><i class="fas fa-bookmark"></i></div>
+              <div class="stat-info">
+                <div class="stat-value">12 Saved</div>
+                <div class="stat-title">Commercial Watchlist</div>
+                <div class="stat-meta-pill gold"><i class="fas fa-tag"></i> Tier Discount Ready</div>
+              </div>
+            </div>
+
+            <div class="dash-stat-card">
+              <div class="stat-icon-wrap gold"><i class="fas fa-receipt"></i></div>
+              <div class="stat-info">
+                <div class="stat-value">$142,850</div>
+                <div class="stat-title">Total Spending (YTD)</div>
+                <div class="stat-meta-pill blue"><i class="fas fa-shield-alt"></i> 100% Escrow Funded</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section F: Spending Overview Progress Bars -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div>
+                <h3>Procurement Budget & Spending Overview</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Real-time budget consumption against enterprise quarter allocation.</p>
+              </div>
+              <span class="section-badge emerald" style="margin-bottom: 0;">Budget Healthy &bull; 71% Used</span>
+            </div>
+
+            <div class="spending-grid">
+              <div class="spending-stat-card">
+                <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600;">Monthly Spending</div>
+                <div style="font-size: 1.25rem; font-weight: 800; color: var(--primary-navy); margin-top: 0.15rem;">$34,200 <span style="font-size: 0.72rem; font-weight: 500; color: var(--text-muted);">/ $45k</span></div>
+                <div class="spending-progress-bar">
+                  <div class="spending-fill" style="width: 76%;"></div>
+                </div>
+              </div>
+
+              <div class="spending-stat-card">
+                <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600;">Total YTD Purchases</div>
+                <div style="font-size: 1.25rem; font-weight: 800; color: var(--primary-navy); margin-top: 0.15rem;">$142,850 <span style="font-size: 0.72rem; font-weight: 500; color: var(--text-muted);">/ $200k</span></div>
+                <div class="spending-progress-bar">
+                  <div class="spending-fill emerald" style="width: 71%;"></div>
+                </div>
+              </div>
+
+              <div class="spending-stat-card">
+                <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600;">Average Order Value</div>
+                <div style="font-size: 1.25rem; font-weight: 800; color: var(--primary-navy); margin-top: 0.15rem;">$8,900</div>
+                <div class="spending-progress-bar">
+                  <div class="spending-fill gold" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <div class="spending-stat-card">
+                <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600;">Volume Discounts Saved</div>
+                <div style="font-size: 1.25rem; font-weight: 800; color: var(--accent-emerald); margin-top: 0.15rem;">$18,400</div>
+                <div class="spending-progress-bar">
+                  <div class="spending-fill emerald" style="width: 92%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section B: Purchase Management Table -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div>
+                <h3>Recent Commercial Purchases & Invoices</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Escrow release tracking, compliance bills, and customs clearance.</p>
+              </div>
+              <button class="btn btn-sm btn-secondary" onclick="window.location.href='404.html'"><i class="fas fa-file-export"></i> Export CSV</button>
+            </div>
+
+            <div class="table-responsive">
+              <table class="orders-table">
+                <thead>
+                  <tr>
+                    <th>PO / Order #</th>
+                    <th>Supplier / Batch</th>
+                    <th>Order Date</th>
+                    <th>Payment Status</th>
+                    <th>Delivery Status</th>
+                    <th>Total</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color: var(--accent-blue);">#B2B-89210</strong></td>
+                    <td>ErgoDesign Studio (40x Chairs)</td>
+                    <td>Sept 25, 2026</td>
+                    <td><span class="status-badge delivered"><i class="fas fa-shield-alt"></i> Escrow Funded</span></td>
+                    <td><span class="status-badge shipped"><i class="fas fa-ship"></i> Freight In-Transit</span></td>
+                    <td><strong>$11,980.00</strong></td>
+                    <td>
+                      <button class="btn btn-sm btn-primary" onclick="window.location.href='404.html'"><i class="fas fa-location-arrow"></i> Track</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: var(--accent-blue);">#B2B-88741</strong></td>
+                    <td>Stackly Sound & Tech (25x Headsets)</td>
+                    <td>Sept 18, 2026</td>
+                    <td><span class="status-badge delivered"><i class="fas fa-check"></i> Escrow Released</span></td>
+                    <td><span class="status-badge delivered"><i class="fas fa-check-circle"></i> Delivered</span></td>
+                    <td><strong>$8,749.75</strong></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-blue" onclick="window.location.href='404.html'"><i class="fas fa-download"></i> Invoice</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: var(--accent-blue);">#B2B-87990</strong></td>
+                    <td>Heritage Leathercraft (60x Duffels)</td>
+                    <td>Sept 05, 2026</td>
+                    <td><span class="status-badge delivered"><i class="fas fa-check"></i> Escrow Released</span></td>
+                    <td><span class="status-badge delivered"><i class="fas fa-check-circle"></i> Delivered</span></td>
+                    <td><strong>$13,140.00</strong></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-blue" onclick="window.location.href='404.html'"><i class="fas fa-download"></i> Invoice</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Section D: Product Comparison Matrix -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div>
+                <h3>Interactive Procurement Comparison Matrix</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Side-by-side corporate specification analysis for bulk hardware.</p>
+              </div>
+              <button class="btn btn-sm btn-accent" onclick="window.location.href='404.html'"><i class="fas fa-print"></i> Generate Spec Sheet</button>
+            </div>
+
+            <div class="comparison-matrix-wrapper">
+              <table class="comparison-matrix-table">
+                <thead>
+                  <tr>
+                    <th>Product Model</th>
+                    <th>Supplier Brand</th>
+                    <th>Unit Price</th>
+                    <th>Bulk Tier (20+ units)</th>
+                    <th>Lead Time</th>
+                    <th>Warranty</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Sony WH-1000XM5</strong></td>
+                    <td>Stackly Sound & Tech</td>
+                    <td>$349.99</td>
+                    <td><strong style="color: var(--accent-emerald);">$299.00 / unit (-15%)</strong></td>
+                    <td>3-5 Days</td>
+                    <td>2 Years Global</td>
+                    <td><button class="btn btn-sm btn-primary" data-add-cart="prod-1">Add to PO</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mechanical RGB Pro Keyboard</strong></td>
+                    <td>Stackly Sound & Tech</td>
+                    <td>$139.99</td>
+                    <td><strong style="color: var(--accent-emerald);">$112.00 / unit (-20%)</strong></td>
+                    <td>2-4 Days</td>
+                    <td>2 Years Global</td>
+                    <td><button class="btn btn-sm btn-primary" data-add-cart="prod-8">Add to PO</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Ergonomic Executive Chair</strong></td>
+                    <td>ErgoDesign Studio</td>
+                    <td>$299.50</td>
+                    <td><strong style="color: var(--accent-emerald);">$239.00 / unit (-20%)</strong></td>
+                    <td>5-7 Days</td>
+                    <td>10 Years Frame</td>
+                    <td><button class="btn btn-sm btn-primary" data-add-cart="prod-3">Add to PO</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Split: Client Activity & Favorite Products -->
+          <div class="dash-split-grid">
+            
+            <!-- Section E: Client Activity Timeline -->
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Procurement Activity Timeline</h3>
+              </div>
+              <div class="activity-timeline">
+                <div class="activity-node">
+                  <div class="activity-title">PO #B2B-89210 Cleared Customs</div>
+                  <div class="activity-time">Today, 09:30 AM &bull; Maersk Logistics Hub</div>
+                </div>
+                <div class="activity-node">
+                  <div class="activity-title">Escrow Vault Funded for PO #B2B-89210 ($11,980)</div>
+                  <div class="activity-time">Sept 25, 2026, 03:00 PM</div>
+                </div>
+                <div class="activity-node">
+                  <div class="activity-title">Supplier Confirmed Spec Sheet: ErgoDesign</div>
+                  <div class="activity-time">Sept 24, 2026, 11:20 AM</div>
+                </div>
+                <div class="activity-node">
+                  <div class="activity-title">Invoice #B2B-88741 Settled & Released</div>
+                  <div class="activity-time">Sept 18, 2026, 04:45 PM</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Section C: Favorite / Saved Commercial Products -->
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Favorite Commercial Items</h3>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 1rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem; border: 1px solid var(--card-border); border-radius: var(--radius-md);">
+                  <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <img src="assets/headphones.webp" alt="Sony Headphones" style="width: 45px; height: 45px; object-fit: cover; border-radius: var(--radius-xs);">
+                    <div>
+                      <div style="font-weight: 700; font-size: 0.9rem; color: var(--primary-navy);">Sony WH-1000XM5</div>
+                      <div style="font-size: 0.8rem; color: var(--accent-emerald);">Tier Price: $299.00</div>
+                    </div>
+                  </div>
+                  <button class="btn btn-sm btn-primary" data-add-cart="prod-1">Re-Order</button>
+                </div>
+
+                <div style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem; border: 1px solid var(--card-border); border-radius: var(--radius-md);">
+                  <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <img src="assets/chair.webp" alt="Ergonomic Chair" style="width: 45px; height: 45px; object-fit: cover; border-radius: var(--radius-xs);">
+                    <div>
+                      <div style="font-weight: 700; font-size: 0.9rem; color: var(--primary-navy);">Ergonomic Mesh Chair</div>
+                      <div style="font-size: 0.8rem; color: var(--accent-emerald);">Tier Price: $239.00</div>
+                    </div>
+                  </div>
+                  <button class="btn btn-sm btn-primary" data-add-cart="prod-3">Re-Order</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+        <!-- VIEW 2: BULK ORDERS TAB -->
+        <section id="view-client-orders" class="dashboard-view-section">
+          <!-- Logistics & Freight Stats -->
+          <div class="dashboard-stats-grid">
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">3 Shipments</div>
+                <div class="stat-title">Active Freight Containers</div>
+              </div>
+              <div class="stat-icon-wrap blue"><i class="fas fa-ship"></i></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">100% Cleared</div>
+                <div class="stat-title">Customs Compliance</div>
+              </div>
+              <div class="stat-icon-wrap emerald"><i class="fas fa-passport"></i></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">48 Hours</div>
+                <div class="stat-title">Next Port Entry ETA</div>
+              </div>
+              <div class="stat-icon-wrap gold"><i class="fas fa-anchor"></i></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">$33,869</div>
+                <div class="stat-title">In-Transit Escrow Value</div>
+              </div>
+              <div class="stat-icon-wrap rose"><i class="fas fa-vault"></i></div>
+            </div>
+          </div>
+
+          <!-- Purchase Orders (PO) Master Table -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div>
+                <h3>Enterprise Purchase Orders (PO) & Freight Status</h3>
+                <p style="font-size: 0.82rem; color: var(--text-muted);">Real-time container logistics, Bill of Lading certificates, and port check-ins.</p>
+              </div>
+              <button class="btn btn-sm btn-secondary" onclick="window.location.href='404.html'"><i class="fas fa-file-pdf"></i> Export Manifest</button>
+            </div>
+
+            <div class="table-responsive">
+              <table class="orders-table">
+                <thead>
+                  <tr>
+                    <th>PO ID</th>
+                    <th>Supplier / Manufacturing Unit</th>
+                    <th>Batch Units</th>
+                    <th>Logistics Carrier</th>
+                    <th>Port Clearance</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color: var(--accent-blue);">#B2B-89210</strong></td>
+                    <td>ErgoDesign Studio &bull; Frame Lab</td>
+                    <td>40 Executive Chairs</td>
+                    <td>Maersk Global (Container #MSK-410)</td>
+                    <td><span class="status-badge shipped"><i class="fas fa-ship"></i> Freight In-Transit</span></td>
+                    <td><strong>$11,980.00</strong></td>
+                    <td>
+                      <button class="btn btn-sm btn-primary" onclick="window.location.href='404.html'">
+                        <i class="fas fa-location-arrow"></i> Track
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: var(--accent-blue);">#B2B-88741</strong></td>
+                    <td>Stackly Sound & Tech &bull; Audio Works</td>
+                    <td>25 Wireless Headsets</td>
+                    <td>DHL Global Express Air</td>
+                    <td><span class="status-badge delivered"><i class="fas fa-check-circle"></i> Delivered & Released</span></td>
+                    <td><strong>$8,749.75</strong></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-blue" onclick="window.location.href='404.html'">
+                        <i class="fas fa-download"></i> Invoice
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: var(--accent-blue);">#B2B-87990</strong></td>
+                    <td>Heritage Leathercraft &bull; Tuscan Mill</td>
+                    <td>60 Full-Grain Duffels</td>
+                    <td>FedEx Cargo Logistics</td>
+                    <td><span class="status-badge delivered"><i class="fas fa-check-circle"></i> Delivered & Released</span></td>
+                    <td><strong>$13,140.00</strong></td>
+                    <td>
+                      <button class="btn btn-sm btn-outline-blue" onclick="window.location.href='404.html'">
+                        <i class="fas fa-download"></i> Invoice
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 3: PURCHASES & INVOICING TAB -->
+        <section id="view-client-purchases" class="dashboard-view-section">
+          <!-- Financial Metrics -->
+          <div class="dashboard-stats-grid">
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">$142,850</div>
+                <div class="stat-title">Total Spend Settled (YTD)</div>
+              </div>
+              <div class="stat-icon-wrap emerald"><i class="fas fa-money-check-alt"></i></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">$18,400</div>
+                <div class="stat-title">Volume Rebates Saved</div>
+              </div>
+              <div class="stat-icon-wrap blue"><i class="fas fa-tags"></i></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">$12,400</div>
+                <div class="stat-title">Tax Deductible VAT</div>
+              </div>
+              <div class="stat-icon-wrap gold"><i class="fas fa-percentage"></i></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">0 Pending</div>
+                <div class="stat-title">Unsettled Invoices</div>
+              </div>
+              <div class="stat-icon-wrap rose"><i class="fas fa-file-invoice-dollar"></i></div>
+            </div>
+          </div>
+
+          <!-- Invoicing Ledger Table -->
+          <div class="dash-card">
+            <div class="dash-card-header">
+              <div>
+                <h3>Corporate Tax Invoices & VAT Ledger</h3>
+                <p style="font-size: 0.82rem; color: var(--text-muted);">Fully compliant commercial VAT receipts, escrow releases, and reconciliation sheets.</p>
+              </div>
+              <button class="btn btn-sm btn-accent" onclick="window.location.href='404.html'"><i class="fas fa-file-excel"></i> Export Ledger</button>
+            </div>
+
+            <div class="table-responsive">
+              <table class="orders-table">
+                <thead>
+                  <tr>
+                    <th>Invoice #</th>
+                    <th>Supplier Entity</th>
+                    <th>Invoice Date</th>
+                    <th>VAT Amount</th>
+                    <th>Total (Net)</th>
+                    <th>Escrow Status</th>
+                    <th>PDF</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong style="color: var(--accent-blue);">INV-2026-89210</strong></td>
+                    <td>ErgoDesign Studio Corp</td>
+                    <td>Sept 25, 2026</td>
+                    <td>$2,156.40</td>
+                    <td><strong>$11,980.00</strong></td>
+                    <td><span class="status-badge shipped"><i class="fas fa-shield-alt"></i> Vault Funded</span></td>
+                    <td><button class="btn btn-sm btn-outline-blue" onclick="window.location.href='404.html'"><i class="fas fa-download"></i> PDF</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: var(--accent-blue);">INV-2026-88741</strong></td>
+                    <td>Stackly Sound & Tech Ltd</td>
+                    <td>Sept 18, 2026</td>
+                    <td>$1,574.95</td>
+                    <td><strong>$8,749.75</strong></td>
+                    <td><span class="status-badge delivered"><i class="fas fa-check"></i> Escrow Released</span></td>
+                    <td><button class="btn btn-sm btn-outline-blue" onclick="window.location.href='404.html'"><i class="fas fa-download"></i> PDF</button></td>
+                  </tr>
+                  <tr>
+                    <td><strong style="color: var(--accent-blue);">INV-2026-87990</strong></td>
+                    <td>Heritage Leathercraft S.p.A</td>
+                    <td>Sept 05, 2026</td>
+                    <td>$2,365.20</td>
+                    <td><strong>$13,140.00</strong></td>
+                    <td><span class="status-badge delivered"><i class="fas fa-check"></i> Escrow Released</span></td>
+                    <td><button class="btn btn-sm btn-outline-blue" onclick="window.location.href='404.html'"><i class="fas fa-download"></i> PDF</button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 4: ORGANIZATION PROFILE TAB -->
+        <section id="view-client-profile" class="dashboard-view-section">
+          <div class="dash-profile-grid">
+            <!-- Enterprise Credential Card -->
+            <div class="dash-card" style="text-align: center;">
+              <div style="position: relative; display: inline-block; margin-bottom: 1rem;">
+                <img src="assets/avatar-enterprise.webp" alt="Stackly Global Enterprise" style="width: 90px; height: 90px; border-radius: var(--radius-full); object-fit: cover; border: 3px solid var(--accent-blue);">
+                <button class="btn-icon" style="position: absolute; bottom: 0; right: 0; width: 28px; height: 28px; background: var(--accent-blue); color: #fff; border-radius: 50%;" onclick="window.location.href='404.html'"><i class="fas fa-camera" style="font-size: 0.75rem;"></i></button>
+              </div>
+              <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--primary-navy); margin-bottom: 0.2rem;">Stackly Global Ent.</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.75rem;">procurement@stacklycorp.com</p>
+              <div style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.75rem; background: var(--accent-blue-subtle); color: var(--accent-blue); border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 700; margin-bottom: 1.25rem;">
+                <i class="fas fa-shield-alt"></i> Tier 1 Verified Enterprise
+              </div>
+
+              <div style="border-top: 1px solid var(--card-border); padding-top: 1rem; text-align: left; display: flex; flex-direction: column; gap: 0.65rem;">
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem;">
+                  <span style="color: var(--text-muted);">DUNS Number:</span>
+                  <strong>89-421-9082</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem;">
+                  <span style="color: var(--text-muted);">EU VAT ID:</span>
+                  <strong>EU98421098</strong>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 0.82rem;">
+                  <span style="color: var(--text-muted);">Escrow Limit:</span>
+                  <strong style="color: var(--accent-emerald);">$500,000 / month</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Organization Details Form -->
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Corporate Billing & Procurement Details</h3>
+              </div>
+              <form id="client-billing-form" novalidate>
+                <div class="dashboard-form-grid">
+                  <div class="form-field">
+                    <label>Company Legal Entity *</label>
+                    <input type="text" id="client-company" name="company" value="Stackly Global Procurement Corp" required>
+                  </div>
+                  <div class="form-field">
+                    <label>Primary Contact Officer *</label>
+                    <input type="text" id="client-officer" name="officer" value="Alexander Wright (CPO)" required>
+                  </div>
+                  <div class="form-field">
+                    <label>Billing Contact Email *</label>
+                    <input type="email" id="client-email" name="email" value="billing@stacklycorp.com" required>
+                  </div>
+                  <div class="form-field">
+                    <label>Invoicing Currency *</label>
+                    <select id="client-currency" name="currency" required>
+                      <option value="USD" selected>USD ($) - United States Dollar</option>
+                      <option value="EUR">EUR (€) - Euro</option>
+                      <option value="GBP">GBP (£) - British Pound</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-field" style="margin-bottom: 1.25rem;">
+                  <label>Registered Corporate Headquarters *</label>
+                  <input type="text" id="client-address" name="address" value="100 Wall Street, 28th Floor, Financial District, New York, NY 10005" required>
+                </div>
+
+                <div style="display: flex; justify-content: flex-end; gap: 0.75rem;">
+                  <button type="button" class="btn btn-sm btn-secondary" onclick="window.location.href='404.html'">Cancel</button>
+                  <button type="submit" class="btn btn-sm btn-primary"><i class="fas fa-save"></i> Save Organization</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 5: B2B SUPPORT & CONCIERGE TAB -->
+        <section id="view-client-support" class="dashboard-view-section">
+          <!-- B2B Concierge Metrics -->
+          <div class="dashboard-stats-grid">
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">&lt; 15 Mins</div>
+                <div class="stat-title">Dedicated SLA Response</div>
+              </div>
+              <div class="stat-icon-wrap blue"><i class="fas fa-stopwatch"></i></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">Marcus Vance</div>
+                <div class="stat-title">Senior Enterprise Director</div>
+              </div>
+              <div class="stat-icon-wrap emerald"><i class="fas fa-user-tie"></i></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">100% Escrow</div>
+                <div class="stat-title">Dispute Guarantee</div>
+              </div>
+              <div class="stat-icon-wrap gold"><i class="fas fa-shield-alt"></i></div>
+            </div>
+            <div class="dash-stat-card">
+              <div class="stat-info">
+                <div class="stat-value">Active</div>
+                <div class="stat-title">Direct Slack / Teams Sync</div>
+              </div>
+              <div class="stat-icon-wrap rose"><i class="fas fa-comments"></i></div>
+            </div>
+          </div>
+
+          <!-- Account Manager Contact & Escalation Form -->
+          <div class="dash-two-col-grid">
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Assigned Enterprise Account Director</h3>
+              </div>
+              <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+                <img src="assets/avatar-director.webp" alt="Marcus Vance" style="width: 65px; height: 65px; border-radius: var(--radius-full); object-fit: cover; border: 2px solid var(--accent-blue);">
+                <div>
+                  <h4 style="font-size: 1.05rem; color: var(--primary-navy); margin-bottom: 0.2rem;">Marcus Vance</h4>
+                  <div style="font-size: 0.78rem; color: var(--accent-emerald); font-weight: 700;"><i class="fas fa-circle" style="font-size: 0.6rem;"></i> Available Online &bull; Enterprise Concierge</div>
+                  <div style="font-size: 0.78rem; color: var(--text-muted); margin-top: 0.2rem;">Direct: +1 (800) 555-STACKLY-DIR</div>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 0.75rem;">
+                <button class="btn btn-sm btn-primary" style="flex: 1;" onclick="window.location.href='404.html'"><i class="fas fa-phone-alt"></i> Call Director</button>
+                <button class="btn btn-sm btn-secondary" style="flex: 1;" onclick="window.location.href='404.html'"><i class="fab fa-slack"></i> Open Slack</button>
+              </div>
+            </div>
+
+            <!-- Dispute & Custom Contract Inquiry Form -->
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Priority Contract or Legal Mediation</h3>
+              </div>
+              <form id="client-support-form" novalidate>
+                <div class="form-field">
+                  <label>Inquiry Type *</label>
+                  <select id="client-ticket-type" name="type" required style="width: 100%; padding: 0.55rem 0.85rem; border: 1px solid var(--card-border); border-radius: var(--radius-sm); font-size: 0.85rem;">
+                    <option value="">Select corporate request type...</option>
+                    <option value="manufacturing">Custom Manufacturing Specification QA</option>
+                    <option value="customs">Freight & Customs Delay Mediation</option>
+                    <option value="rebate">Volume Tier Rebate Adjustment</option>
+                    <option value="escrow_vault">Escrow Vault Wire Transfer Authorization</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label>PO Number (Optional)</label>
+                  <input type="text" id="client-po-number" name="po_number" placeholder="#B2B-89210" style="width: 100%; padding: 0.55rem 0.85rem; border: 1px solid var(--card-border); border-radius: var(--radius-sm); font-size: 0.85rem;">
+                </div>
+                <div class="form-field">
+                  <label>Details & Requirements *</label>
+                  <textarea id="client-ticket-msg" name="message" rows="3" required placeholder="Specify your requirements for senior review..." style="width: 100%; padding: 0.55rem 0.85rem; border: 1px solid var(--card-border); border-radius: var(--radius-sm); font-size: 0.85rem;"></textarea>
+                </div>
+                <button type="submit" class="btn btn-sm btn-primary" style="width: 100%;"><i class="fas fa-bolt"></i> Dispatch Priority Request</button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- VIEW 6: GOVERNANCE & SETTINGS TAB -->
+        <section id="view-client-settings" class="dashboard-view-section">
+          <div class="dash-two-col-grid">
+            <!-- Spending Governance -->
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Procurement Governance & Spending Limits</h3>
+              </div>
+              <div style="display: flex; flex-direction: column;">
+                <div class="dash-list-item">
+                  <div class="dash-list-item-text">
+                    <div class="dash-list-item-title">Single Order Approval Limit</div>
+                    <div class="dash-list-item-desc">Orders above threshold require CFO 2-factor signoff.</div>
+                  </div>
+                  <strong style="color: var(--primary-navy); font-size: 0.95rem; white-space: nowrap;">$50,000</strong>
+                </div>
+
+                <div class="dash-list-item">
+                  <div class="dash-list-item-text">
+                    <div class="dash-list-item-title">Multi-Signature Workflow</div>
+                    <div class="dash-list-item-desc">Require 2 authorized officers for escrow release.</div>
+                  </div>
+                  <span class="status-badge delivered"><i class="fas fa-check"></i> Enforced</span>
+                </div>
+
+                <div class="dash-list-item">
+                  <div class="dash-list-item-text">
+                    <div class="dash-list-item-title">Automated Customs Clearance Release</div>
+                    <div class="dash-list-item-desc">Release escrow 5 business days after port receipt.</div>
+                  </div>
+                  <span class="status-badge processing"><i class="fas fa-clock"></i> 5 Days</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- ERP Integrations -->
+            <div class="dash-card">
+              <div class="dash-card-header">
+                <h3>Enterprise ERP & Ledger Integrations</h3>
+              </div>
+              <div style="display: flex; flex-direction: column;">
+                <div class="dash-list-item">
+                  <div class="dash-list-item-text">
+                    <div class="dash-list-item-title"><i class="fas fa-network-wired" style="color: var(--accent-blue);"></i> SAP Ariba & Oracle NetSuite</div>
+                    <div class="dash-list-item-desc">Live bidirectional PO sync and invoice webhook.</div>
+                  </div>
+                  <span class="status-badge delivered"><i class="fas fa-check"></i> Connected</span>
+                </div>
+
+                <div class="dash-list-item">
+                  <div class="dash-list-item-text">
+                    <div class="dash-list-item-title"><i class="fas fa-receipt" style="color: var(--accent-emerald);"></i> QuickBooks VAT Invoicing</div>
+                    <div class="dash-list-item-desc">Automated quarterly tax file synchronization.</div>
+                  </div>
+                  <span class="status-badge delivered"><i class="fas fa-check"></i> Syncing</span>
+                </div>
+
+                <div class="dash-list-item">
+                  <div class="dash-list-item-text">
+                    <div class="dash-list-item-title">Export Full Annual Audit Log</div>
+                    <div class="dash-list-item-desc">Download complete 2026 financial transactions (CSV/PDF).</div>
+                  </div>
+                  <button class="btn btn-sm btn-secondary" onclick="window.location.href='404.html'"><i class="fas fa-file-csv"></i> Export Audit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+  </div>
+
+  <!-- Quick View Modal Container -->
+  <div id="quick-view-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="close-quick-modal"><i class="fas fa-times"></i></button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer" class="side-drawer">
+    <div class="drawer-header">
+      <h3><i class="fas fa-shopping-bag" style="color: var(--accent-blue);"></i> Shopping Cart</h3>
+      <button class="btn-icon" id="close-cart-drawer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-content" id="cart-drawer-items"></div>
+    <div class="drawer-footer">
+      <div class="drawer-subtotal">
+        <span>Subtotal:</span>
+        <span id="cart-drawer-subtotal">$0.00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer -->
+  <div id="wishlist-drawer" class="side-drawer">
+    <div class="drawer-header">
+      <h3><i class="fas fa-heart" style="color: var(--accent-rose);"></i> Saved Wishlist</h3>
+      <button class="btn-icon" id="close-wishlist-drawer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-content" id="wishlist-drawer-items"></div>
+  </div>
+
+  <div class="drawer-backdrop"></div>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>

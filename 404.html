@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found | Stackly</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Core & Page Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    .error-page-wrapper {
+      height: 100vh;
+      max-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      background: radial-gradient(circle at center, #ffffff 0%, #f1f5f9 100%);
+      text-align: center;
+      box-sizing: border-box;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Ambient Background Animated Orbs */
+    .bg-ambient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(70px);
+      opacity: 0.45;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .orb-1 {
+      width: 280px;
+      height: 280px;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.4), rgba(99, 102, 241, 0.3));
+      top: 10%;
+      left: 15%;
+      animation: floatOrb1 10s ease-in-out infinite alternate;
+    }
+    .orb-2 {
+      width: 320px;
+      height: 320px;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.3), rgba(168, 85, 247, 0.25));
+      bottom: 10%;
+      right: 15%;
+      animation: floatOrb2 12s ease-in-out infinite alternate;
+    }
+    .orb-3 {
+      width: 200px;
+      height: 200px;
+      background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(239, 68, 68, 0.2));
+      top: 60%;
+      left: 20%;
+      animation: floatOrb3 9s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatOrb1 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(40px, 30px) scale(1.1); }
+      100% { transform: translate(-30px, 50px) scale(0.95); }
+    }
+    @keyframes floatOrb2 {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-50px, -40px) scale(1.15); }
+      100% { transform: translate(30px, -20px) scale(0.9); }
+    }
+    @keyframes floatOrb3 {
+      0% { transform: translate(0, 0) scale(0.9); }
+      100% { transform: translate(35px, -35px) scale(1.1); }
+    }
+
+    .error-card {
+      position: relative;
+      z-index: 2;
+      max-width: 620px;
+      width: 100%;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      border-radius: var(--radius-xl);
+      padding: 2.5rem 2.75rem;
+      box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(0, 0, 0, 0.03);
+      box-sizing: border-box;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: cardEntrance 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .error-card:hover {
+      box-shadow: 0 20px 48px -10px rgba(37, 99, 235, 0.12), 0 6px 16px -2px rgba(0, 0, 0, 0.04);
+    }
+
+    @keyframes cardEntrance {
+      0% { opacity: 0; transform: translateY(24px) scale(0.97); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Animated Icon Badge with Radar Glow */
+    .error-icon-badge {
+      position: relative;
+      width: 62px;
+      height: 62px;
+      border-radius: var(--radius-full);
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(99, 102, 241, 0.15));
+      color: var(--accent-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin: 0 auto 0.75rem;
+      animation: badgeBounce 3s ease-in-out infinite;
+    }
+    .error-icon-badge::before {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      background: rgba(37, 99, 235, 0.2);
+      z-index: -1;
+      animation: radarPulse 2.4s cubic-bezier(0.25, 1, 0.5, 1) infinite;
+    }
+
+    @keyframes badgeBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    @keyframes radarPulse {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      100% { transform: scale(1.5); opacity: 0; }
+    }
+
+    /* 404 Floating & Shimmering Number */
+    .error-code {
+      font-size: 5.6rem;
+      font-weight: 900;
+      line-height: 1;
+      background: linear-gradient(135deg, #2563eb 0%, #3b82f6 40%, #06b6d4 80%, #2563eb 100%);
+      background-size: 250% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.4rem;
+      letter-spacing: -1.5px;
+      display: inline-block;
+      animation: textShimmer 5s linear infinite, float404 3.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes textShimmer {
+      0% { background-position: 0% center; }
+      100% { background-position: 250% center; }
+    }
+    @keyframes float404 {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-6px); }
+    }
+
+    .error-title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--primary-navy);
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.5px;
+    }
+    .error-desc {
+      font-size: 0.96rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 480px;
+      margin: 0 auto 1.5rem;
+    }
+
+    /* Animated Action Buttons */
+    .error-actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 1.6rem;
+    }
+    .error-actions .btn {
+      padding: 0.72rem 1.65rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .error-actions .btn i {
+      transition: transform 0.25s ease;
+    }
+    .error-actions .btn:hover {
+      transform: translateY(-2px);
+    }
+    .error-actions .btn-primary:hover {
+      box-shadow: 0 8px 20px -4px rgba(37, 99, 235, 0.35);
+    }
+    .error-actions .btn-secondary:hover {
+      box-shadow: 0 8px 20px -4px rgba(0, 0, 0, 0.08);
+    }
+    .error-actions .btn:hover i {
+      transform: scale(1.18);
+    }
+
+    /* Quick Links with Hover Micro-animations */
+    .error-quick-links {
+      border-top: 1px solid var(--card-border);
+      padding-top: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .error-quick-links span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+    .error-quick-links a {
+      color: var(--accent-blue);
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--radius-sm);
+    }
+    .error-quick-links a:hover {
+      color: var(--primary-navy);
+      background: rgba(37, 99, 235, 0.06);
+      transform: translateY(-1px);
+    }
+    .error-quick-links a i {
+      transition: transform 0.2s ease;
+    }
+    .error-quick-links a:hover i {
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 640px) {
+      .error-card { padding: 1.75rem 1.25rem; max-width: 95%; }
+      .error-code { font-size: 4.2rem; }
+      .error-title { font-size: 1.45rem; }
+      .error-desc { font-size: 0.88rem; margin-bottom: 1.25rem; }
+      .error-actions { flex-direction: column; gap: 0.6rem; margin-bottom: 1.25rem; }
+      .error-actions .btn { width: 100%; }
+      .error-quick-links { gap: 0.6rem; font-size: 0.8rem; }
+    }
+
+    @media (max-width: 425px) {
+      .error-card { padding: 1.35rem 1rem; }
+      .error-code { font-size: 3.5rem; }
+      .error-title { font-size: 1.25rem; }
+      .error-desc { font-size: 0.82rem; margin-bottom: 1rem; }
+      .error-actions { gap: 0.5rem; margin-bottom: 1rem; }
+      .error-actions .btn { padding: 0.55rem 1rem; font-size: 0.85rem; }
+      .error-quick-links { gap: 0.35rem; font-size: 0.75rem; padding-top: 0.85rem; }
+      .error-quick-links a { font-size: 0.75rem; padding: 0.2rem 0.35rem; }
+      .error-icon-badge { width: 50px; height: 50px; font-size: 1.3rem; margin-bottom: 0.5rem; }
+    }
+
+    @media (max-width: 360px) {
+      .error-card { padding: 1.1rem 0.75rem; }
+      .error-code { font-size: 3rem; }
+      .error-title { font-size: 1.15rem; }
+      .error-desc { font-size: 0.78rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Animated Glowing Background Blobs -->
+  <div class="bg-ambient-orb orb-1"></div>
+  <div class="bg-ambient-orb orb-2"></div>
+  <div class="bg-ambient-orb orb-3"></div>
+
+  <!-- 404 Main Container -->
+  <main class="error-page-wrapper">
+    <div class="container" style="max-width: 660px; padding: 0; position: relative; z-index: 2;">
+      
+      <!-- 404 Error Card with Entrance & Micro-animations -->
+      <div class="error-card">
+        <div class="error-icon-badge">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <div class="error-code">404</div>
+        <h1 class="error-title">Page Not Found</h1>
+        <p class="error-desc">
+          The page or resource you are looking for might have been removed, had its name changed, or is temporarily unavailable in the Stackly catalog.
+        </p>
+        
+        <div class="error-actions">
+          <a href="index.html" class="btn btn-primary">
+            <i class="fas fa-home"></i> Back to Homepage
+          </a>
+          <button type="button" class="btn btn-secondary" onclick="goBackHistory()">
+            <i class="fas fa-arrow-left"></i> Go Back
+          </button>
+        </div>
+
+        <div class="error-quick-links">
+          <span>Popular Destinations:</span>
+          <a href="index.html"><i class="fas fa-store"></i> Marketplace</a>
+          <a href="services.html"><i class="fas fa-concierge-bell"></i> Services</a>
+          <a href="blog.html"><i class="fas fa-newspaper"></i> Blog</a>
+          <a href="about.html"><i class="fas fa-users"></i> About Us</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/script.js"></script>
+  <script>
+    function goBackHistory() {
+      if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
+</body>
+</html>

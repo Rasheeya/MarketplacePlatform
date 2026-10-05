@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Free Account - Stackly Marketplace</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Core & Page Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/signup.css">
+</head>
+<body>
+
+  <!-- Signup Main Wrapper -->
+  <main class="signup-page-wrapper">
+    <!-- Top Navigation Bar -->
+    <header class="signup-topbar">
+      <a href="index.html" class="signup-back-btn">
+        <i class="fas fa-arrow-left"></i> <span>Go to Home</span>
+      </a>
+    </header>
+
+    <div class="signup-container-grid" data-aos="zoom-in">
+      
+      <!-- Left: Registration Form -->
+      <div class="signup-form-side">
+        <div style="margin-bottom: 0.85rem;">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 0.5rem; display: inline-block;">
+            <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img" style="height: 32px;">
+          </a>
+          <div>
+            <span class="section-badge" style="margin-bottom: 0.35rem; font-size: 0.72rem; padding: 0.2rem 0.6rem;"><i class="fas fa-user-plus"></i> Free Registration</span>
+            <h2 style="font-size: 1.45rem; font-weight: 800; color: var(--primary-navy); margin-bottom: 0.2rem;">Join Stackly</h2>
+            <p style="color: var(--text-muted); font-size: 0.82rem;">Create your profile to start discovering curated brands or selling globally.</p>
+          </div>
+        </div>
+
+        <!-- Section A: Account Type Selector -->
+        <div class="signup-type-selector">
+          <div class="signup-type-card selected" data-role="user">
+            <i class="fas fa-user"></i>
+            <div class="type-title">Shopper Account</div>
+            <div class="type-desc">Personal discovery & orders</div>
+          </div>
+          <div class="signup-type-card" data-role="client">
+            <i class="fas fa-store"></i>
+            <div class="type-title">Client / Merchant</div>
+            <div class="type-desc">B2B procurement & selling</div>
+          </div>
+        </div>
+
+        <!-- Section B: Registration Form -->
+        <form id="signup-form" novalidate>
+          <div class="signup-form-row">
+            <div class="form-field" style="margin-bottom: 0;">
+              <label style="font-size: 0.78rem; font-weight: 600; margin-bottom: 0.2rem;">Full Name *</label>
+              <input type="text" id="signup-fullname" placeholder="e.g. John Doe" required style="padding: 0.5rem 0.85rem; border: 1px solid var(--card-border); border-radius: var(--radius-sm); font-size: 0.85rem; background: #f8fafc;">
+            </div>
+            <div class="form-field" style="margin-bottom: 0;">
+              <label style="font-size: 0.78rem; font-weight: 600; margin-bottom: 0.2rem;">Phone Number *</label>
+              <input type="tel" id="signup-phone" placeholder="e.g. +1 (555) 000-0000" required style="padding: 0.5rem 0.85rem; border: 1px solid var(--card-border); border-radius: var(--radius-sm); font-size: 0.85rem; background: #f8fafc;">
+            </div>
+          </div>
+
+          <div class="form-field" style="margin-bottom: 0.65rem;">
+            <label style="font-size: 0.78rem; font-weight: 600; margin-bottom: 0.2rem;">Email Address *</label>
+            <input type="email" id="signup-email" placeholder="name@example.com" required style="width: 100%; padding: 0.5rem 0.85rem; border: 1px solid var(--card-border); border-radius: var(--radius-sm); font-size: 0.85rem; background: #f8fafc;">
+          </div>
+
+          <div class="signup-form-row">
+            <div class="form-field" style="margin-bottom: 0;">
+              <label style="font-size: 0.78rem; font-weight: 600; margin-bottom: 0.2rem;">Password *</label>
+              <div class="password-toggle-wrapper">
+                <input type="password" id="signup-password" placeholder="••••••••" required style="width: 100%; padding: 0.5rem 2.2rem 0.5rem 0.85rem; border: 1px solid var(--card-border); border-radius: var(--radius-sm); font-size: 0.85rem; background: #f8fafc;">
+                <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility" onclick="togglePasswordVisibility('signup-password', this)">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+            <div class="form-field" style="margin-bottom: 0;">
+              <label style="font-size: 0.78rem; font-weight: 600; margin-bottom: 0.2rem;">Confirm Password *</label>
+              <div class="password-toggle-wrapper">
+                <input type="password" id="signup-confirm-password" placeholder="••••••••" required style="width: 100%; padding: 0.5rem 2.2rem 0.5rem 0.85rem; border: 1px solid var(--card-border); border-radius: var(--radius-sm); font-size: 0.85rem; background: #f8fafc;">
+                <button type="button" class="password-toggle-btn" aria-label="Toggle password visibility" onclick="togglePasswordVisibility('signup-confirm-password', this)">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field" style="margin-bottom: 0.85rem;">
+            <label class="checkbox-label" style="font-size: 0.78rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 0.4rem; cursor: pointer;">
+              <input type="checkbox" id="signup-terms" required style="margin-top: 2px;">
+              <span>I agree to the <a href="404.html" style="color: var(--accent-blue);">Marketplace Terms of Service</a> and <a href="404.html" style="color: var(--accent-blue);">Privacy Policy</a>.</span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%; padding: 0.65rem; font-size: 0.9rem; margin-bottom: 0.75rem;">
+            <i class="fas fa-check-circle"></i> Create Free Account
+          </button>
+        </form>
+
+        <div style="text-align: center; font-size: 0.82rem; color: var(--text-muted);">
+          Already have an account? <a href="login.html" style="color: var(--accent-blue); font-weight: 700;">Sign In</a>
+        </div>
+      </div>
+
+      <!-- Right: Registration Perks & Security -->
+      <div class="signup-info-side">
+        <div>
+          <span class="section-badge emerald" style="color: #ffffff; background: rgba(16, 185, 129, 0.25); border-color: rgba(255,255,255,0.2); font-size: 0.72rem; padding: 0.2rem 0.6rem;">Membership Perks</span>
+          <h3 style="font-size: 1.3rem; font-weight: 800; margin: 0.5rem 0 0.35rem; line-height: 1.3;">Elevate Your Commerce Experience</h3>
+          <p style="color: var(--text-light); font-size: 0.8rem;">Enjoy exclusive member perks across thousands of verified merchants.</p>
+
+          <!-- Section D: Registration Benefits -->
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; margin: 1.25rem 0;">
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <div style="width: 28px; height: 28px; border-radius: var(--radius-full); background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); font-size: 0.75rem; flex-shrink: 0;"><i class="fas fa-percentage"></i></div>
+              <div>
+                <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.1rem;">Member-Only Discounts</h4>
+                <p style="font-size: 0.75rem; color: var(--text-light); line-height: 1.35;">Access exclusive vendor discounts up to 30% off retail.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <div style="width: 28px; height: 28px; border-radius: var(--radius-full); background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); font-size: 0.75rem; flex-shrink: 0;"><i class="fas fa-shield-alt"></i></div>
+              <div>
+                <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.1rem;">Escrow Protection Guarantee</h4>
+                <p style="font-size: 0.75rem; color: var(--text-light); line-height: 1.35;">Full refund guarantee with prepaid 14-day return shipping.</p>
+              </div>
+            </div>
+
+            <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
+              <div style="width: 28px; height: 28px; border-radius: var(--radius-full); background: rgba(255,255,255,0.12); display: flex; align-items: center; justify-content: center; color: var(--accent-cyan); font-size: 0.75rem; flex-shrink: 0;"><i class="fas fa-boxes"></i></div>
+              <div>
+                <h4 style="font-size: 0.85rem; font-weight: 700; margin-bottom: 0.1rem;">Unified Multi-Vendor Cart</h4>
+                <p style="font-size: 0.75rem; color: var(--text-light); line-height: 1.35;">Order from 10 different brands in a single one-click transaction.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section D: Secure Registration Seal -->
+        <div class="security-seal">
+          <i class="fas fa-shield-alt"></i>
+          <div class="security-seal-text">
+            <strong>Verified Buyer Protection</strong><br>
+            All member transactions are backed by audited escrow guarantees.
+          </div>
+        </div>
+      </div>
+  </main>
+
+  <!-- Quick View Modal Container -->
+  <div id="quick-view-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="close-quick-modal"><i class="fas fa-times"></i></button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer" class="side-drawer">
+    <div class="drawer-header">
+      <h3><i class="fas fa-shopping-bag" style="color: var(--accent-blue);"></i> Shopping Cart</h3>
+      <button class="btn-icon" id="close-cart-drawer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-content" id="cart-drawer-items"></div>
+    <div class="drawer-footer">
+      <div class="drawer-subtotal">
+        <span>Subtotal:</span>
+        <span id="cart-drawer-subtotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="openCheckoutModal()">
+        <i class="fas fa-lock"></i> Proceed to Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer -->
+  <div id="wishlist-drawer" class="side-drawer">
+    <div class="drawer-header">
+      <h3><i class="fas fa-heart" style="color: var(--accent-rose);"></i> Saved Wishlist</h3>
+      <button class="btn-icon" id="close-wishlist-drawer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-content" id="wishlist-drawer-items"></div>
+  </div>
+
+  <div class="drawer-backdrop"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

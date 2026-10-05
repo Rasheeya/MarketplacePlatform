@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketplace Insights & Seller Success | Stackly Blog</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- AOS Animation CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+  <!-- Core & Page Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-icon-btn" data-open-wishlist title="View Wishlist">
+          <i class="far fa-heart"></i>
+          <span class="badge-count wishlist-count-badge">0</span>
+        </button>
+        <button class="nav-icon-btn" data-open-cart title="View Cart">
+          <i class="fas fa-shopping-bag"></i>
+          <span class="badge-count cart-count-badge">0</span>
+        </button>
+        <a href="login.html" class="btn btn-primary btn-sm">Login</a>
+        <button class="hamburger-btn" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer">
+    <div class="mobile-drawer-header">
+      <a href="index.html" class="brand-logo">
+        <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img">
+      </a>
+      <button class="close-drawer-btn btn-icon"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="mobile-menu-links">
+      <a href="index.html" class="mobile-nav-link"><span>Home</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="about.html" class="mobile-nav-link"><span>About</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="services.html" class="mobile-nav-link"><span>Services</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="blog.html" class="mobile-nav-link active"><span>Blog</span> <i class="fas fa-chevron-right"></i></a>
+      <a href="contact.html" class="mobile-nav-link"><span>Contact</span> <i class="fas fa-chevron-right"></i></a>
+    </div>
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Log In</a>
+    </div>
+  </div>
+
+  <!-- Page Hero Header -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-hero-grid">
+        <div class="page-hero-content" data-aos="fade-right">
+          <h1 class="page-hero-title">Commerce Trends & <span class="highlight">Growth Strategies</span></h1>
+          <p class="page-hero-desc">Expert buying guides, merchant scaling playbooks, category forecasts, and customer experience case studies.</p>
+          
+          <div class="hero-trust-chips">
+            <div class="hero-trust-chip"><i class="fas fa-newspaper"></i> Weekly Research</div>
+            <div class="hero-trust-chip emerald"><i class="fas fa-chart-pie"></i> Data-Backed Analyses</div>
+            <div class="hero-trust-chip gold"><i class="fas fa-lightbulb"></i> Proven Seller Guides</div>
+          </div>
+        </div>
+
+        <div class="page-hero-visual" data-aos="fade-left">
+          <div class="hero-glass-card">
+            <div class="hero-card-header">
+              <span class="hero-card-badge"><i class="fas fa-book-open"></i> Editorial Radar</span>
+              <div class="hero-pulse-dot" title="Daily Updates"></div>
+            </div>
+            <div class="hero-card-stats">
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-file-alt" style="color: #38bdf8;"></i> Published Guides</span>
+                <span class="hero-stat-value accent">120+ In-Depth</span>
+              </div>
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-users" style="color: #34d399;"></i> Weekly Readers</span>
+                <span class="hero-stat-value emerald">45,000+</span>
+              </div>
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-fire" style="color: #fbbf24;"></i> Trending Topic</span>
+                <span class="hero-stat-value gold">#EscrowCommerce</span>
+              </div>
+              <div class="hero-stat-row">
+                <span class="hero-stat-label"><i class="fas fa-check-circle" style="color: #f43f5e;"></i> Verified Case Studies</span>
+                <span class="hero-stat-value">100% Real Sellers</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Section A: Featured Article -->
+  <section class="section-py" style="background: #ffffff;">
+    <div class="container">
+      <div class="featured-article-card" data-aos="fade-up">
+        <img src="assets/blog-featured.webp" alt="State of Global Marketplace Commerce" class="featured-article-img">
+        
+        <div class="featured-article-body">
+          <div class="article-meta-row">
+            <span class="section-badge" style="margin-bottom: 0; padding: 0.25rem 0.75rem; font-size: 0.75rem;">E-Commerce Trends</span>
+            <span><i class="far fa-clock"></i> 7 min read</span>
+            <span>Sept 26, 2026</span>
+          </div>
+
+          <h2 class="featured-article-title">The 2026 Multi-Vendor Commerce Index: Why Escrow & Verified Sellers Drive 85% of Buyer Decisions</h2>
+          
+          <p class="featured-article-desc">In-depth market research on how consumer trust mechanisms, rapid multi-vendor checkout, and automated fulfillment SLAs are redefining global digital commerce.</p>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+            <div class="author-chip">
+              <img src="assets/avatar-elena.webp" alt="Marcus Vance" class="author-avatar">
+              <div>
+                <div style="font-weight: 700; font-size: 0.95rem; color: var(--primary-navy);">Marcus Vance</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Chief Commerce Strategist</div>
+              </div>
+            </div>
+            <a href="404.html" class="btn btn-primary btn-sm">Read Full Report <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section B: Latest Marketplace Insights -->
+  <section class="section-py" style="background: #f8fafc;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge gold">Curated Articles</span>
+        <h2 class="section-title">Latest <span class="highlight">Marketplace Insights</span></h2>
+        <p class="section-subtitle">Actionable guidance covering smart shopping strategies, inventory logistics, and brand growth.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="blog-filter-nav" data-aos="fade-up">
+        <button class="blog-filter-tab active" data-filter="all">All Topics</button>
+        <button class="blog-filter-tab" data-filter="shopping">Shopping Tips</button>
+        <button class="blog-filter-tab" data-filter="seller">Seller Strategies</button>
+        <button class="blog-filter-tab" data-filter="trends">Product Trends</button>
+        <button class="blog-filter-tab" data-filter="growth">Business Growth</button>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="blog-grid" id="blog-grid-container" data-aos="fade-up">
+        <!-- Card 1 -->
+        <div class="blog-article-card" data-category="shopping">
+          <div class="article-thumb-wrap">
+            <span class="badge-tag badge-new" style="top: 10px; left: 10px;">Shopping Tips</span>
+            <img src="assets/blog-post-1.webp" alt="Verified Electronics">
+          </div>
+          <div class="article-body">
+            <h3>How to Spot Verified Authentic Electronics in 2026</h3>
+            <p>Crucial inspection checkpoints, serial number verification, and manufacturer warranty validation techniques before you buy.</p>
+            <div class="article-footer">
+              <span>Sept 24, 2026</span>
+              <a href="404.html" style="color: var(--accent-blue); font-weight: 700;">Read More <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="blog-article-card" data-category="seller">
+          <div class="article-thumb-wrap">
+            <span class="badge-tag badge-trending" style="top: 10px; left: 10px;">Seller Tips</span>
+            <img src="assets/blog-post-2.webp" alt="Seller Scaling">
+          </div>
+          <div class="article-body">
+            <h3>5 Optimization Tweaks That Boosted Store Conversions by 40%</h3>
+            <p>From 360-degree product photography to transparent shipping breakdowns, here is what top vendors do differently.</p>
+            <div class="article-footer">
+              <span>Sept 22, 2026</span>
+              <a href="404.html" style="color: var(--accent-blue); font-weight: 700;">Read More <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="blog-article-card" data-category="trends">
+          <div class="article-thumb-wrap">
+            <span class="badge-tag badge-discount" style="top: 10px; left: 10px;">Product Trends</span>
+            <img src="assets/blog-post-3.webp" alt="Clean Beauty Trends">
+          </div>
+          <div class="article-body">
+            <h3>The Surge of Bioactive Skincare: Consumer Demand Forecast</h3>
+            <p>Analysis of clean formulation certifications, zero-waste packaging, and clinical transparency in cosmetic marketplaces.</p>
+            <div class="article-footer">
+              <span>Sept 20, 2026</span>
+              <a href="404.html" style="color: var(--accent-blue); font-weight: 700;">Read More <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="blog-article-card" data-category="growth">
+          <div class="article-thumb-wrap">
+            <span class="badge-tag badge-new" style="top: 10px; left: 10px;">Business Growth</span>
+            <img src="assets/blog-post-4.webp" alt="B2B Procurement">
+          </div>
+          <div class="article-body">
+            <h3>B2B Wholesale Procurement: Reducing Friction with Escrow</h3>
+            <p>How corporate procurement departments are replacing slow credit lines with instant marketplace escrow transactions.</p>
+            <div class="article-footer">
+              <span>Sept 18, 2026</span>
+              <a href="404.html" style="color: var(--accent-blue); font-weight: 700;">Read More <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="blog-article-card" data-category="shopping">
+          <div class="article-thumb-wrap">
+            <span class="badge-tag badge-trending" style="top: 10px; left: 10px;">Shopping Tips</span>
+            <img src="assets/blog-post-5.webp" alt="Seasonal Deals">
+          </div>
+          <div class="article-body">
+            <h3>The Ultimate Guide to Flash Deals: Timing Your Purchases</h3>
+            <p>Algorithms behind deal drops, stock allocation timers, and how to configure instant price drop alerts.</p>
+            <div class="article-footer">
+              <span>Sept 15, 2026</span>
+              <a href="404.html" style="color: var(--accent-blue); font-weight: 700;">Read More <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="blog-article-card" data-category="seller">
+          <div class="article-thumb-wrap">
+            <span class="badge-tag badge-new" style="top: 10px; left: 10px;">Seller Strategies</span>
+            <img src="assets/blog-post-6.webp" alt="Warehouse logistics">
+          </div>
+          <div class="article-body">
+            <h3>Multi-Hub Warehousing: Cutting Delivery Times to Under 48h</h3>
+            <p>Smart inventory distribution strategies across regional marketplace hubs to ensure priority courier dispatch.</p>
+            <div class="article-footer">
+              <span>Sept 12, 2026</span>
+              <a href="404.html" style="color: var(--accent-blue); font-weight: 700;">Read More <i class="fas fa-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section C: Interactive Buying Guides -->
+  <section class="section-py" style="background: #ffffff;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge emerald">Smart Consumer Manuals</span>
+        <h2 class="section-title">Interactive <span class="highlight">Buying Guides</span></h2>
+        <p class="section-subtitle">Step-by-step masterclasses to help you evaluate products with expert precision.</p>
+      </div>
+
+      <div class="guides-grid">
+        <div class="guide-card" data-aos="fade-up" data-aos-delay="50">
+          <div class="guide-icon"><i class="fas fa-sliders-h"></i></div>
+          <h4>How to Choose the Right Product</h4>
+          <p>Define exact use-case constraints, power profiles, material grades, and lifecycle durability benchmarks.</p>
+          <a href="404.html" class="btn btn-outline-blue btn-sm">View Guide <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="guide-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="guide-icon"><i class="fas fa-exchange-alt"></i></div>
+          <h4>How to Compare Products Like a Pro</h4>
+          <p>Evaluate spec sheets, warranty clauses, power-to-weight ratios, and total lifetime cost.</p>
+          <a href="404.html" class="btn btn-outline-blue btn-sm">View Guide <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="guide-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="guide-icon"><i class="fas fa-user-shield"></i></div>
+          <h4>How to Identify Trusted Sellers</h4>
+          <p>Read verification badges, fulfillment speed metrics, dispute resolution history, and verified buyer reviews.</p>
+          <a href="404.html" class="btn btn-outline-blue btn-sm">View Guide <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="guide-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="guide-icon"><i class="fas fa-tags"></i></div>
+          <h4>How to Find the Best Deals</h4>
+          <p>Leverage countdown coupons, bundle multi-category discounts, and participate in VIP flash drops.</p>
+          <a href="404.html" class="btn btn-outline-blue btn-sm">View Guide <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section D: Seller Success Stories -->
+  <section class="section-py" style="background: #f8fafc;">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge gold">Merchant Spotlight</span>
+        <h2 class="section-title">Seller <span class="highlight">Success Stories</span></h2>
+        <p class="section-subtitle">Real merchants who turned independent craft into high-velocity multi-million dollar brands on Stackly.</p>
+      </div>
+
+      <div class="stories-grid">
+        <div class="story-card" data-aos="fade-up" data-aos-delay="50">
+          <img src="assets/story-1.webp" alt="Stackly Sound & Tech" class="story-banner">
+          <div class="story-body">
+            <span class="growth-badge"><i class="fas fa-chart-line"></i> +320% Annual Revenue</span>
+            <h4>Stackly Sound & Tech</h4>
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Category: Audio & Electronics</div>
+            <p class="story-quote">"Stackly's escrow protection and sponsored listing tools allowed us to expand into 14 countries in less than 9 months."</p>
+            <a href="404.html" class="btn btn-secondary btn-sm" style="width: 100%;">Read Full Story</a>
+          </div>
+        </div>
+
+        <div class="story-card" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/story-2.webp" alt="Lumière Naturals" class="story-banner">
+          <div class="story-body">
+            <span class="growth-badge"><i class="fas fa-chart-line"></i> 50,000+ Orders Fulfilled</span>
+            <h4>Lumière Naturals</h4>
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Category: Organic Beauty & Wellness</div>
+            <p class="story-quote">"The verified customer review system eliminated counterfeit competitors and built authentic brand trust for our botanical skincare line."</p>
+            <a href="404.html" class="btn btn-secondary btn-sm" style="width: 100%;">Read Full Story</a>
+          </div>
+        </div>
+
+        <div class="story-card" data-aos="fade-up" data-aos-delay="150">
+          <img src="assets/story-3.webp" alt="ErgoDesign Studio" class="story-banner">
+          <div class="story-body">
+            <span class="growth-badge"><i class="fas fa-chart-line"></i> $1.8M B2B Procurement</span>
+            <h4>ErgoDesign Studio</h4>
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Category: Ergonomic Furniture</div>
+            <p class="story-quote">"The B2B client dashboard allows corporate buyers to purchase our ergonomic seating in bulk seamlessly with unified invoicing."</p>
+            <a href="404.html" class="btn btn-secondary btn-sm" style="width: 100%;">Read Full Story</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section E: Trending Marketplace Topics (Marquee) -->
+  <section class="section-py-sm" style="background: #ffffff;">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 1.5rem;" data-aos="fade-up">
+        <span class="section-badge">Live Radar</span>
+        <h3 style="font-size: 1.35rem; font-weight: 800; color: var(--primary-navy);">Trending Marketplace Topics</h3>
+      </div>
+
+      <div class="topics-marquee-container" data-aos="zoom-in">
+        <div class="topics-track">
+          <div class="topic-pill"><i class="fas fa-fire" style="color: var(--accent-rose);"></i> #OnlineShopping</div>
+          <div class="topic-pill"><i class="fas fa-bolt" style="color: var(--accent-gold);"></i> #DigitalCommerce</div>
+          <div class="topic-pill"><i class="fas fa-search" style="color: var(--accent-blue);"></i> #ProductDiscovery</div>
+          <div class="topic-pill"><i class="fas fa-chart-line" style="color: var(--accent-emerald);"></i> #SellerGrowth</div>
+          <div class="topic-pill"><i class="fas fa-shield-alt" style="color: var(--accent-indigo);"></i> #EscrowProtection</div>
+          <div class="topic-pill"><i class="fas fa-mobile-alt" style="color: var(--accent-cyan);"></i> #CustomerExperience</div>
+          <div class="topic-pill"><i class="fas fa-boxes" style="color: var(--accent-blue);"></i> #B2BProcurement</div>
+          <div class="topic-pill"><i class="fas fa-truck" style="color: var(--accent-gold);"></i> #ExpressFulfillment</div>
+          <!-- Repeat for smooth scroll -->
+          <div class="topic-pill"><i class="fas fa-fire" style="color: var(--accent-rose);"></i> #OnlineShopping</div>
+          <div class="topic-pill"><i class="fas fa-bolt" style="color: var(--accent-gold);"></i> #DigitalCommerce</div>
+          <div class="topic-pill"><i class="fas fa-search" style="color: var(--accent-blue);"></i> #ProductDiscovery</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section F: Interactive Newsletter Subscription -->
+  <section class="section-py" style="background: var(--grad-primary); color: #ffffff;">
+    <div class="container" style="text-align: center;" data-aos="fade-up">
+      <span class="section-badge gold">Weekly Marketplace Digest</span>
+      <h2 style="font-size: 2.3rem; font-weight: 800; margin: 1rem 0;">Get Marketplace Deals & Industry Insights</h2>
+      <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 2rem; font-size: 1rem;">Join 45,000+ e-commerce professionals and savvy consumers who receive our weekly curated marketplace digests.</p>
+      
+      <div class="newsletter-form-box on-dark">
+        <form id="blog-newsletter-form" class="newsletter-form" novalidate>
+          <div class="newsletter-input-group">
+            <input type="email" placeholder="Enter your business email" required class="newsletter-input">
+          </div>
+          <button type="submit" class="btn btn-accent newsletter-btn"><i class="fas fa-paper-plane"></i> Subscribe Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo footer-logo">
+            <img src="assets/logo.webp" alt="Stackly" class="brand-logo-img">
+          </a>
+          <p>The next-generation marketplace platform connecting discerning buyers with verified global brands, independent makers, and premier suppliers.</p>
+          <div class="footer-social-links">
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-twitter"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-instagram"></i></a>
+            <a href="javascript:void(0)" class="footer-social-btn"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Marketplace</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Shopping</h4>
+          <div class="footer-links">
+            <a href="index.html#featured-products">Featured Products</a>
+            <a href="index.html">Today's Deals</a>
+            <a href="index.html#trending-products-grid">Trending Items</a>
+            <a href="services.html">Buyer Protection</a>
+            <a href="client-dashboard.html">B2B Procurement</a>
+          </div>
+        </div>
+
+
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:info@stackly.com" style="color: var(--text-light);">info@stackly.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt"></i>
+            <a href="tel:98001245736" style="color: var(--text-light);">98001245736</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-clock"></i>
+            <span>Mon - Sat: 9:00 AM - 7:00 PM</span>
+          </div>
+        </div>
+
+        <div class="footer-col footer-map-col">
+          <h4>Our Location</h4>
+          <div class="footer-map-container">
+            <iframe 
+              src="https://maps.google.com/maps?q=11.6829566,78.1739798&hl=en&z=15&output=embed" 
+              title="Stackly Location Map"
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <a href="https://www.google.com/maps/place/Stackly/@11.6829566,78.1739798,17z/data=!3m1!4b1!4m6!3m5!1s0x3babefef7fd970bb:0xe11aef1a71994f9!8m2!3d11.6829566!4d78.1739798!16s%2Fg%2F11l660s35r" target="_blank" rel="noopener" class="footer-map-btn">
+              <i class="fas fa-directions"></i> Open in Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stackly Platform Inc. All rights reserved.</div>
+        <div class="payment-badges">
+          <i class="fab fa-cc-visa"></i>
+          <i class="fab fa-cc-mastercard"></i>
+          <i class="fab fa-cc-apple-pay"></i>
+          <i class="fab fa-cc-paypal"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick View Modal Container -->
+  <div id="quick-view-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="close-quick-modal"><i class="fas fa-times"></i></button>
+      <div id="quick-view-content"></div>
+    </div>
+  </div>
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer" class="side-drawer">
+    <div class="drawer-header">
+      <h3><i class="fas fa-shopping-bag" style="color: var(--accent-blue);"></i> Shopping Cart</h3>
+      <button class="btn-icon" id="close-cart-drawer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-content" id="cart-drawer-items"></div>
+    <div class="drawer-footer">
+      <div class="drawer-subtotal">
+        <span>Subtotal:</span>
+        <span id="cart-drawer-subtotal">$0.00</span>
+      </div>
+      <button class="btn btn-primary" style="width: 100%;" onclick="openCheckoutModal()">
+        <i class="fas fa-lock"></i> Proceed to Checkout
+      </button>
+    </div>
+  </div>
+
+  <!-- Wishlist Drawer -->
+  <div id="wishlist-drawer" class="side-drawer">
+    <div class="drawer-header">
+      <h3><i class="fas fa-heart" style="color: var(--accent-rose);"></i> Saved Wishlist</h3>
+      <button class="btn-icon" id="close-wishlist-drawer"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="drawer-content" id="wishlist-drawer-items"></div>
+  </div>
+
+  <div class="drawer-backdrop"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
